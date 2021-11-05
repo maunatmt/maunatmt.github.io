@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Dashboard</title>
+<meta name="viewport" content="width=device-width">
+<meta name="robots" content="noindex,nofollow">
+<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu+Condensed">
+<link rel="stylesheet" href="./css/styles.css">
+<script src="https://d3js.org/d3.v7.min.js"></script>
+<script src="https://www.promisejs.org/polyfills/promise-7.0.4.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+<input type="checkbox" id="navTgl">
+<label for="navTgl" class="open"><span></span></label>
+<label for="navTgl" class="close"></label>
+<nav class="menu">
+	<h2>menu</h2>
+	<ul>
+		<li><a href="#article1">Sales Simulation</a></li>
+		<li><a href="#article2">Customer Segment</a></li>
+		<li><a href="#article3">Risk Management</a></li>
+		<li><a href="#article4">Tableau&nbsp;<i class="fas fa-external-link-alt"></i></a></li>
+	</ul>
+</nav>
+<div class="contents">
+	<header>
+		<h1 class="logo">Dashboard</h1>
+		<nav>
+			<ul>
+				<li><a href="#article1">Product</a></li>
+				<li><a href="#article2">Digital Marketing</a></li>
+				<li><a href="#article3">Finance</a></li>
+				<li><a href="#article4">Tableau&nbsp;<i class="fas fa-external-link-alt"></i></a></li>
+			</ul>
+		</nav>
+	</header>
+	<article>
+		<section id="article1">
+			<h2>Sales Simulation</h2>
+			<figure>
+				<figcaption>Sales Simulation<a href="#" class="btn">Read More</a></figcaption>
+			</figure>
+      <figure class="row">
+        <div>
+          <h1>Patients</h1>
+          <div id="app">
+            <ol>
+                <li v-for="person in vtuber">{{ person.name }}</li>
+            </ol>
+        </div>
+          <p>837</p>
+          <ul>
+            <li>40% of Sunny Street patients are homeless.</li>
+            <li>Majority of the patients are male and are aged between 36 - 55 years old with the yougest being 1 year old.</li>
+          </ul>
+        </div>
+        <div>
+          <p>Gender</p>
+          <div class="row">
+            <div>Male</div>
+            <div>Female</div>
+            <div>Unknown</div>
+            <div>Other</div>
+          </div>
+          <p>Ages</p>
+          <div class="row">
+            <div>5-25</div>
+            <div>26-35</div>
+            <div>36-55</div>
+          </div>
+        </div>
+      </figure>
+
+      <figure class="row">
+        <div>
+          <h1>Patients</h1>
+          <p>837</p>
+        </div>
+        <div>
+          <h1>Patients</h1>
+          <p>837</p>
+        </div>
+        <div>
+          <h1>Patients</h1>
+          <p>837</p>
+        </div>
+      </figure>
+
+
+      <div id="simple-chart"></div>
+		</section>
+  </article>
+	<footer>
+		<p class="copyright"><small>© ST</small></p>
+	</footer>
+</div>
+<script src="./js/scripts.js"></script>
+</body>
+</html>
