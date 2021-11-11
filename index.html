@@ -5,9 +5,15 @@
 <title>Dashboard</title>
 <meta name="viewport" content="width=device-width">
 <meta name="robots" content="noindex,nofollow">
-<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu+Condensed">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"/>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed:ital@1&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="./css/styles.css">
+<script
+  src="https://code.jquery.com/jquery-3.6.0.min.js"
+  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+  crossorigin="anonymous"></script>
 <script src="https://d3js.org/d3.v7.min.js"></script>
 <script src="https://www.promisejs.org/polyfills/promise-7.0.4.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
@@ -18,32 +24,34 @@
 <label for="navTgl" class="open"><span></span></label>
 <label for="navTgl" class="close"></label>
 <nav class="menu">
-	<h2>menu</h2>
+	<h2 class="logo">Dashboard</h2>
 	<ul>
-		<li><a href="#article1">Sales Simulation</a></li>
-		<li><a href="#article2">Customer Segment</a></li>
-		<li><a href="#article3">Risk Management</a></li>
-		<li><a href="#article4">Tableau&nbsp;<i class="fas fa-external-link-alt"></i></a></li>
-	</ul>
+    <li><a href="#article1">Media</a></li>
+    <li><a href="#article2">Commerce</a></li>
+    <li><a href="#article3">Customer Support</a></li>
+    <li><a href="#article4">Tableau&nbsp;<i class="fas fa-external-link-alt"></i></a></li>
+  </ul>
 </nav>
+<div id="wrap">
+  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"  width="100%" height="100" viewBox="0 0 100 100" preserveAspectRatio="none" id="svg-bg">
+    <path d="M0,0 100,0 100,50 0,100 Z" fill="#1E90FF" />
+  </svg>
 <div class="contents">
 	<header>
 		<h1 class="logo">Dashboard</h1>
 		<nav>
 			<ul>
-				<li><a href="#article1">Product</a></li>
-				<li><a href="#article2">Digital Marketing</a></li>
-				<li><a href="#article3">Finance</a></li>
+				<li><a href="#article1">Media</a></li>
+				<li><a href="#article2">Commerce</a></li>
+				<li><a href="#article3">Customer Support</a></li>
 				<li><a href="#article4">Tableau&nbsp;<i class="fas fa-external-link-alt"></i></a></li>
 			</ul>
 		</nav>
 	</header>
 	<article>
-		<section id="article1">
-			<h2>Sales Simulation</h2>
-			<figure>
-				<figcaption>Sales Simulation<a href="#" class="btn">Read More</a></figcaption>
-			</figure>
+		<section >
+			<h2 id="article1">Media</h2>
+      In 2018, Dr Nova Evans & Sonia Goodwin (Nurse) resigned from their public sector managerial roles to make a difference to the mainstream healthcare system in Australia. This led to the birth of Sunny Street, a monile outreach unit with Doctors, Nurses, Paramedics, & Nurse Practioners providing healthcare service for vulnerable individuals and families.
       <figure class="row">
         <div>
           <h1>Patients</h1>
@@ -90,13 +98,13 @@
         </div>
       </figure>
 
-
       <div id="simple-chart"></div>
 		</section>
   </article>
 	<footer>
-		<p class="copyright"><small>© ST</small></p>
+		<p class="copyright"><small>© ST.inc</small></p>
 	</footer>
+</div>
 </div>
 <script src="./js/scripts.js"></script>
 </body>

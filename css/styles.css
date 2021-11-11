@@ -1,14 +1,28 @@
 @charset "utf-8";
-
 body {
 	margin: 0;
     background-color: rgba(249,249,249,1);
+}
+.stop-scroll {
+	overflow: hidden;
+}
+.dark-color {
+	position: fixed;
+	background: rgba(0,0,0,.1);
+}
+#svg-bg {
+	filter: drop-shadow(1.95px 1.95px 2.6px rgba(0, 0, 0, 0.35));
+}
+#wrap {
+    background-color: rgba(249,249,249,1);
+	width: 100%;
+	/* padding-top:4em; */
 }
 .contents {
 	transition: transform .6s cubic-bezier(0.215, 0.61, 0.355, 1);
 }
 #navTgl:checked ~ .contents {
-	transform: translateX(250px);
+	touch-action: none
 }
 
 /* :::::: toggle button :::::: */
@@ -25,7 +39,7 @@ label {
 	z-index: 2;
 	width: 48px;
 	height: 48px;
-	background: lightSeaGreen;
+	background: darkturquoise;
 	transition: background .6s, transform .6s cubic-bezier(0.215, 0.61, 0.355, 1);
 }
 .open::before,
@@ -54,11 +68,12 @@ label {
 	width: 100%;
 	height: 100%;
 	pointer-events: none;
-	transition: background .6s;
+	transition: background 1s;
 }
 #navTgl:checked + .open {
-	background: indianRed;
+	background: salmon;
 	transform: translateX(250px);
+	display: none;
 }
 #navTgl:checked + .open span {
 	transform: scaleX(0);
@@ -71,12 +86,12 @@ label {
 }
 #navTgl:checked ~ .close {
 	pointer-events: auto;
-	background: rgba(0,0,0,.3);
+	background: rgba(0,0,0,.5);
 }
 
 /* :::::: drawer menu :::::: */
 .menu {
-	z-index: 1;
+	z-index: 10;
 	position: fixed;
 	overflow: auto;
 	top: 0;
@@ -86,16 +101,17 @@ label {
 	margin: 0;
 	padding: 10px;
 	box-sizing: border-box;
-	background: rgba(0,0,0,.6);
+	background: rgba(0,0,0,.8);
 	transform: translateX(-100%);
 	transition: transform .6s cubic-bezier(0.215, 0.61, 0.355, 1);
 }
-.menu h2,
+.menu h2 {
+	color: white;
+	line-height: 48px;
+	text-align: center;
+}
 .menu a {
 	color: white;
-}
-.menu h2 {
-	text-align: center;
 }
 .menu ul {
 	margin: 0;
@@ -119,6 +135,7 @@ label {
 }
 #navTgl:checked ~ .menu {
 	transform: none;
+	box-shadow: 0 25px 25px 0 rgba(0, 0, 0, .8);
 }
 
 /* :::::: header, footer :::::: */
@@ -127,34 +144,30 @@ header {
 	text-align: center;
     display: flex;
     background-color: white;
+    width: 100%;
+	line-height: 48px;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .1);
 }
 footer {
 	box-sizing: border-box;
 	text-align: center;
-}
-header .logo,
-footer .copyright {
-	margin: 0;
-	color: #553969;
-	font-family: "Ubuntu Condensed", sans-serif;
-	font-weight: 400;
-	line-height: 50px;
-	letter-spacing: .1em;
-    padding-left: 60px;
-}
-header {
-	position: relative;
-	margin-bottom: 40px;
-    position: fixed;
-}
-footer {
 	background: rgba(232,234,238,.6);
+	line-height: 100px;
+}
+.logo, .copyright {
+	margin: 0;
+	color: royalblue;
+	font-family: 'Fira Sans Condensed', sans-serif;
+	font-weight: 400;
+	letter-spacing: .1em;
+    padding-left: 10px;
 }
 footer small {
 	font-size: 1em;
 }
-
-/* :::::: article :::::: */
 article {
 	width: 100%;
 	max-width: 647px;
@@ -162,41 +175,8 @@ article {
 	padding: 0 16px;
 	box-sizing: border-box;
 }
-section {
-	margin: 4em 0;
-}
 section h2 {
 	margin: 0 0 .6em;
-}
-figure {
-	position: relative;
-	margin: 0;
-	padding-bottom: 3.6em;
-}
-figure img {
-	max-width: calc(100% - 10px);
-	margin-bottom: .8em;
-	padding: 5px;
-	vertical-align: middle;
-	background: rgba(255,255,255,.6);
-}
-figcaption {
-	font-size: .8em;
-}
-section .btn {
-	display: block;
-	position: absolute;
-	right: 0;
-	bottom: 0;
-	padding: 1em 2em;
-	color: white;
-	background: lightSeaGreen;
-	text-align: center;
-	text-decoration: inherit;
-	transition: background .3s;
-}
-section .btn:hover {
-	background: indianRed;
 }
 
 /* :::::: nav :::::: */
@@ -230,11 +210,11 @@ header nav li a {
 	padding: 1em;
 	color: white;
 	text-decoration: inherit;
-	background: lightSeaGreen;
+	background: darkturquoise;
 	transition: background .3s;
 }
 header nav li a:hover {
-	background: indianRed;
+	background: salmon;
 }
 
 /* :::::: change mechanism :::::: */
@@ -263,5 +243,8 @@ header nav {
 		opacity: 0;
 		pointer-events: none;
 		transition-delay: .4s, 0s;
+	}
+	header .logo {
+		padding-left: 60px;
 	}
 }
