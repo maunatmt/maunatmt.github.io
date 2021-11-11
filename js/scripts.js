@@ -1,3 +1,6 @@
+$("#navTgl").on("click", function(){
+    $("#wrap").toggleClass("stop-scroll").toggleClass('dark-color');
+});
 var app = new Vue({
   el: '#app',
   data: {
@@ -12,7 +15,7 @@ var app = new Vue({
   mounted: function() {
       var self = this;
       axios
-          .get('./misc/data.json', self.headers)
+          .get('https://raw.githubusercontent.com/maunatmt/maunatmt.github.io/main/misc/data.json', self.headers)
           .then(function(response) {
               self.vtuber = response.data.vtuber;
           })
