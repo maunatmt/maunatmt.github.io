@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>Dashboard</title>
+<title>KPI Dashboard</title>
 <meta name="viewport" content="width=device-width">
 <meta name="robots" content="noindex,nofollow">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"/>
@@ -27,84 +27,181 @@
 	<h2 class="logo">Dashboard</h2>
 	<ul>
     <li><a href="#article1">Media</a></li>
-    <li><a href="#article2">Commerce</a></li>
+    <li><a href="#article2">Commerse</a></li>
     <li><a href="#article3">Customer Support</a></li>
-    <li><a href="#article4">Tableau&nbsp;<i class="fas fa-external-link-alt"></i></a></li>
+    <!-- <li><a href="#article3">Tableau&nbsp;<i classs="fas fa-external-link-alt"></i></a></li> -->
   </ul>
 </nav>
 <div id="wrap">
-  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"  width="100%" height="100" viewBox="0 0 100 100" preserveAspectRatio="none" id="svg-bg">
-    <path d="M0,0 100,0 100,50 0,100 Z" fill="#1E90FF" />
+  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"  width="100%" height="100" viewBox="0 0 100 100" preserveAspectRatio="none" class="svg">
+  <path d="M0,0 100,0 100,50 0,100 Z" fill="#1E90FF" />
   </svg>
-<div class="contents">
-	<header>
-		<h1 class="logo">Dashboard</h1>
-		<nav>
-			<ul>
-				<li><a href="#article1">Media</a></li>
-				<li><a href="#article2">Commerce</a></li>
-				<li><a href="#article3">Customer Support</a></li>
-				<li><a href="#article4">Tableau&nbsp;<i class="fas fa-external-link-alt"></i></a></li>
-			</ul>
-		</nav>
-	</header>
-	<article>
-		<section >
-			<h2 id="article1">Media</h2>
-      In 2018, Dr Nova Evans & Sonia Goodwin (Nurse) resigned from their public sector managerial roles to make a difference to the mainstream healthcare system in Australia. This led to the birth of Sunny Street, a monile outreach unit with Doctors, Nurses, Paramedics, & Nurse Practioners providing healthcare service for vulnerable individuals and families.
-      <figure class="row">
-        <div>
-          <h1>Patients</h1>
+  <div class="contents">
+    <header>
+      <h1 class="logo">KPI Dashboard<small> for reuse business</small></h1>
+      <nav>
+        <ul>
+          <li><a href="#article1">Media</a></li>
+          <li><a href="#article2">Commerse</a></li>
+          <li><a href="#article3">Customer Support</a></li>
+          <!-- <li><a href="#article3">Tableau&nbsp;<i class="fas fa-external-link-alt"></i></a></li> -->
+        </ul>
+      </nav>
+    </header>
+    <article>
+      <section >
+        <h1 id="article1">Media</h1>
+        私たちのメインのゴールは購買者への認知の向上です。いかに多くの顧客にアプローチしてもらうかが重要です。せん今月の目標を越えられるように頑張っていきましょう。
+        <figure class="row center">
           <div id="app">
             <ol>
                 <li v-for="person in vtuber">{{ person.name }}</li>
             </ol>
-        </div>
-          <p>837</p>
-          <ul>
-            <li>40% of Sunny Street patients are homeless.</li>
-            <li>Majority of the patients are male and are aged between 36 - 55 years old with the yougest being 1 year old.</li>
-          </ul>
-        </div>
-        <div>
-          <p>Gender</p>
-          <div class="row">
-            <div>Male</div>
-            <div>Female</div>
-            <div>Unknown</div>
-            <div>Other</div>
           </div>
-          <p>Ages</p>
-          <div class="row">
-            <div>5-25</div>
-            <div>26-35</div>
-            <div>36-55</div>
+          <div class="small-card red">
+            <h2>Visiters</h2>
+            <p>12,367</p>
+            <span>+374</span>
           </div>
-        </div>
-      </figure>
+          <div class="small-card red">
+            <h2>Page Views</h2>
+            <p>85,372</p>
+            <span>+2,526</span>
+          </div>
+          <div class="small-card blue">
+            <h2>Session Time</h2>
+            <p>00:05:35</p>
+            <span>-00:00:22</span>
+          </div>
+          <div class="small-card red">
+            <h2>Instagram Followers</h2>
+            <p>4,702</p>
+            <span>+22</span>
+          </div>
+          <div class="small-card red">
+            <h2>Youtube Followers</h2>
+            <p>2,837</p>
+            <span>+8</span>
+          </div>
+          <div class="small-card red">
+            <h2>Twitter Followers</h2>
+            <p>837</p>
+            <span>+5</span>
+          </div>
+        </figure>
+        <figure class="row">
+          <div class="card">
+            <h2 class="green">Top3 Social Inflow</h2>
+            <div>
+              <div class="app">
+                <ol>
+                    <li v-for="person in vtuber">{{ person.name }}</li>
+                </ol>
+              </div>
+              <div class="center">
+                <div id="simple-chart" class="card center"></div>
+              </div>
+              <ul>
+                <li>40% of Sunny Street patients are homeless.</li>
+                <li>Majority of the patients are male and are aged between 36 - 55 years old with the yougest being 1 year old.</li>
+              </ul>
+            </div>
+          </div>
+          <div class="card">
+            <h2 class="purple">Trend</h2>
+            <div>
+              <div class="app">
+                <ol>
+                    <li v-for="person in vtuber">{{ person.name }}</li>
+                </ol>
+              </div>
+              <div class="center">
+                <div id="simple-chart" class="card center"></div>
+              </div>
+              <ul>
+                <li>40% of Sunny Street patients are homeless.</li>
+                <li>Majority of the patients are male and are aged between 36 - 55 years old with the yougest being 1 year old.</li>
+              </ul>
+            </div>
+          </div>
+          <div class="card">
+            <h2 class="orange">Grouping </h2>
+            <div>
+              <div class="app">
+                <ol>
+                    <li v-for="person in vtuber">{{ person.name }}</li>
+                </ol>
+              </div>
+              <div class="center">
+                <div id="simple-chart" class="card center"></div>
+              </div>
+              <ul>
+                <li>40% of Sunny Street patients are homeless.</li>
+                <li>Majority of the patients are male and are aged between 36 - 55 years old with the yougest being 1 year old.</li>
+              </ul>
+            </div>
+          </div>
+        </figure>
+      </section>
+    </article>
+    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"  width="100%" height="50" viewBox="0 0 100 100" preserveAspectRatio="none" class="svg">
+      <path d="M0,0 100,0 100,5 0,100 Z" fill="#48D1CC" />
+      </svg>
+    <article>
+      <section >
+        <h1 id="article2">Commerse</h1>
+        私たちのメインのゴールは購買者への認知の向上です。Web検索の結果からいかに多くの顧客にアプローチしてもらうかが重要です。今月の目標を越えられるように頑張っていきましょう。
+        <figure class="row">
+          <div class="card imp">
+            <h1>Patients</h1>
+            <p>837</p>
+            <ul>
+              <li>40% of Sunny Street patients are homeless.</li>
+              <li>Majority of the patients are male and are aged between 36 - 55 years old with the yougest being 1 year old.</li>
+            </ul>
+          </div>
+          <div class="card">
+            <p>Gender</p>
+            <div class="row">
+              <div>Male</div>
+              <div>Female</div>
+              <div>Unknown</div>
+              <div>Other</div>
+            </div>
+            <p>Ages</p>
+            <div class="row">
+              <div>5-25</div>
+              <div>26-35</div>
+              <div>36-55</div>
+            </div>
+          </div>
+        </figure>
 
-      <figure class="row">
-        <div>
-          <h1>Patients</h1>
-          <p>837</p>
-        </div>
-        <div>
-          <h1>Patients</h1>
-          <p>837</p>
-        </div>
-        <div>
-          <h1>Patients</h1>
-          <p>837</p>
-        </div>
-      </figure>
-
-      <div id="simple-chart"></div>
-		</section>
-  </article>
-	<footer>
-		<p class="copyright"><small>© ST.inc</small></p>
-	</footer>
-</div>
+        <figure class="row center">
+          <div>
+            <h1>Patients</h1>
+            <p>837</p>
+          </div>
+          <div>
+            <h1>Patients</h1>
+            <p>837</p>
+          </div>
+          <div>
+            <h1>Patients</h1>
+            <p>837</p>
+          </div>
+        </figure>
+      </section>
+    </article>
+    <div id="before-footer">
+      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="50px" viewBox="0 0 100 100" preserveAspectRatio="none">
+        <path d="M0,0 q50,125 100,0 Z" fill="rgba(249,249,249,1)" />
+      </svg>
+    </div>
+    <footer>
+      <p class="copyright"><small>© iST.inc</small></p>
+    </footer>
+  </div>
 </div>
 <script src="./js/scripts.js"></script>
 </body>

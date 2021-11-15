@@ -2,7 +2,7 @@ $("#navTgl").on("click", function(){
     $("#wrap").toggleClass("stop-scroll").toggleClass('dark-color');
 });
 var app = new Vue({
-  el: '#app',
+  el: '.app',
   data: {
       vtuber: [],
       headers: {
@@ -25,72 +25,79 @@ var app = new Vue({
   }
 })
 
-// 1. データの準備
-var dataset = [
-  [5, 20],
-  [480, 90],
-  [250, 50],
-  [100, 33],
-  [330, 95],
-  [410, 12],
-  [475, 44],
-  [25, 67],
-  [85, 21],
-  [220, 88]
+var margin = {
+  top: 30, 
+  right: 30, 
+  bottom: 30, 
+  left: 80
+};
+
+var size = {
+width: 300 - margin.left - margin.right,
+height: 150 - margin.top - margin.bottom
+}
+
+var data = [
+  {'publishedDate': '2017-01-07','rank': 14},
+  {'publishedDate': '2017-01-16','rank': 13},
+  {'publishedDate': '2017-01-23','rank': 7},
+  {'publishedDate': '2017-01-30','rank': 10}
 ];
 
-var width = 400; // グラフの幅
-var height = 300; // グラフの高さ
-var margin = { "top": 30, "bottom": 60, "right": 30, "left": 60 };
+var data2 = [
+  {'publishedDate': '2017-01-07','rank': 6},
+  {'publishedDate': '2017-01-16','rank': 6},
+  {'publishedDate': '2017-01-23','rank': 4},
+  {'publishedDate': '2017-01-30','rank': 18}
+];
 
-// 2. SVG領域の設定
-var svg = d3.select("#simple-chart").append("svg").attr("width", width).attr("height", height);
+var svg = d3.select("#simple-chart")
+.append("svg")
+.attr("width", size.width + margin.left + margin.right)
+.attr("height", size.height + margin.top + margin.bottom)
+.append("g")
+.attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-// 3. 軸スケールの設定
-var xScale = d3.scaleLinear()
-  .domain([0, d3.max(dataset, function(d) { return d[0]; })])
-  .range([margin.left, width - margin.right]);
+var xScale = d3.scaleTime()
+.domain([new Date(data[0].publishedDate),new Date(data[data.length - 1].publishedDate)])
+.range([0,size.width]);
 
 var yScale = d3.scaleLinear()
-  .domain([0, d3.max(dataset, function(d) { return d[1]; })])
-  .range([height - margin.bottom, margin.top]);
+.domain([1,22])
+.range([size.height,0]);
 
-// 4. 軸の表示
-var axisx = d3.axisBottom(xScale).ticks(5);
-var axisy = d3.axisLeft(yScale).ticks(5);
-
-svg.append("g")
-  .attr("transform", "translate(" + 0 + "," + (height - margin.bottom) + ")")
-  .call(axisx)
-  .append("text")
-  .attr("fill", "black")
-  .attr("x", (width - margin.left - margin.right) / 2 + margin.left)
-  .attr("y", 35)
-  .attr("text-anchor", "middle")
-  .attr("font-size", "10pt")
-  .attr("font-weight", "bold")
-  .text("X Label");
+// svg.append("g")
+//   .call(
+//     d3.axisLeft(yScale)
+//       .ticks(5)
+//    )
+  // .append("text")
+  // .attr("text-anchor", "middle")
+  // .attr("fill", "black")
+  // .attr("x",-50)
+  // .attr("y",size.height/2)
+  // .attr("font-size", "10pt")
+  // .text("Sales");
 
 svg.append("g")
-  .attr("transform", "translate(" + margin.left + "," + 0 + ")")
-  .call(axisy)
-  .append("text")
-  .attr("fill", "black")
-  .attr("x", -(height - margin.top - margin.bottom) / 2 - margin.top)
-  .attr("y", -35)
-  .attr("transform", "rotate(-90)")
-  .attr("text-anchor", "middle")
-  .attr("font-weight", "bold")
-  .attr("font-size", "10pt")
-  .text("Y Label");
-
-// 5. プロットの表示
-svg.append("g")
-  .selectAll("circle")
-  .data(dataset)
-  .enter()
-  .append("circle")
-  .attr("cx", function(d) { return xScale(d[0]); })
-  .attr("cy", function(d) { return yScale(d[1]); })
-  .attr("fill", "steelblue")
-  .attr("r", 4);
+.attr("transform", "translate(0," + size.height + ")")
+.call(
+  d3.axisBottom(xScale)
+    .tickFormat(d3.timeFormat("%m-%d"))
+ )
+ .append("text")
+ .attr("stroke","gray");
+var line = d3.line()
+  .x(function(d,i) { return xScale(new Date(d.publishedDate)); })
+  .y(function(d,i) { return yScale(d.rank); });
+svg.append("path")
+  .datum(data)
+  .attr("d",line)
+  .attr("stroke-width", 3)
+  .attr("stroke","dodgerblue")
+  .attr("fill","none");
+svg.append("path")
+  .datum(data2)
+  .attr("d",line)
+  .attr("stroke","gray")
+  .attr("fill","none");
