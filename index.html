@@ -52,13 +52,24 @@
       <section >
         <h1 id="article1">Media</h1>
         私たちのメインのゴールは購買者への認知の向上です。いかに多くの顧客にアプローチしてもらうかが重要です。せん今月の目標を越えられるように頑張っていきましょう。
-        <figure class="row center">
-          <div id="app">
-            <ol>
-                <li v-for="person in vtuber">{{ person.name }}</li>
-            </ol>
+        <figure id="app" class="row center">
+          <div v-for="card in media">
+            <div v-if="card.result">
+              <div class="small-card red">
+                <h2>{{ card.item }}</h2>
+                <p>{{ card.number }}</p>
+                <span>{{ card.diff }}</span>
+              </div>
+            </div>
+            <div v-else>
+              <div class="small-card blue">
+                <h2>{{ card.item }}</h2>
+                <p>{{ card.number }}</p>
+                <span>{{ card.diff }}</span>
+              </div>
+            </div>
           </div>
-          <div class="small-card red">
+          <!-- <div class="small-card red">
             <h2>Visiters</h2>
             <p>12,367</p>
             <span>+374</span>
@@ -87,7 +98,7 @@
             <h2>Twitter Followers</h2>
             <p>837</p>
             <span>+5</span>
-          </div>
+          </div> -->
         </figure>
         <figure class="row">
           <div class="card">
