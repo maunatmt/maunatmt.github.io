@@ -2,27 +2,37 @@ $("#navTgl").on("click", function(){
     $("#wrap").toggleClass("stop-scroll").toggleClass('dark-color');
 });
 var app = new Vue({
-  el: '.app',
+  el: '#app',
   data: {
-      vtuber: [],
-      headers: {
-        'Content-Type': 'application/json;charset=UTF-8',
-        "Access-Control-Allow-Origin": "*",
-        "Access-Control-Allow-Methods": "GET, POST, PATCH, PUT, DELETE, OPTIONS",
-        "Access-Control-Allow-Headers": "Origin, Content-Type, X-Auth-Token"
-      }
+    "media": [
+      { "id": 0, "item": "Visiters", "number": "12,367", "result": true, "diff": "+374" },
+      { "id": 1, "item": "Page Views", "number": "85,372", "result": true, "diff": "+2,526" },
+      { "id": 2, "item": "Session Time", "number": "00:05:35", "result": false, "diff": "-00:00:22" },
+      { "id": 3, "item": "Instagram Followers", "number": "4,702", "result": true, "diff": "+22" },
+      { "id": 4, "item": "Youtube Followers", "number": "2,837", "result": true, "diff": "+8" },
+      { "id": 5, "item": "Twitter Followers", "number": "837", "result": true, "diff": "+5" }
+    ]
   },
-  mounted: function() {
-      var self = this;
-      axios
-          .get('https://raw.githubusercontent.com/maunatmt/maunatmt.github.io/main/misc/data.json', self.headers)
-          .then(function(response) {
-              self.vtuber = response.data.vtuber;
-          })
-          .catch(function(error) {
-              console.log('Failed to load.', error);
-          })
-  }
+  // data: {
+  //     media: [],
+  //     headers: {
+  //       'Content-Type': 'application/json;charset=UTF-8',
+  //       "Access-Control-Allow-Origin": "*",
+  //       "Access-Control-Allow-Methods": "GET, POST, PATCH, PUT, DELETE, OPTIONS",
+  //       "Access-Control-Allow-Headers": "Origin, Content-Type, X-Auth-Token"
+  //     }
+  // },
+  // mounted: function() {
+  //     var self = this;
+  //     axios
+  //         .get('https://raw.githubusercontent.com/maunatmt/maunatmt.github.io/main/misc/data.json', self.headers)
+  //         .then(function(response) {
+  //             self.media = response.data.media;
+  //         })
+  //         .catch(function(error) {
+  //             console.log('Failed to load.', error);
+  //         })
+  // }
 })
 
 var margin = {
