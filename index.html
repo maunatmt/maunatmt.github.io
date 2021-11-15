@@ -53,20 +53,22 @@
         <h1 id="article1">Media</h1>
         私たちのメインのゴールは購買者への認知の向上です。いかに多くの顧客にアプローチしてもらうかが重要です。せん今月の目標を越えられるように頑張っていきましょう。
         <figure id="app" class="row center">
-          <span>
-            <div class="small-card red" v-for="card in media">
-              <div v-if="result">
-                <h2>{{ card.item }}</h2>
-                <p>{{ card.number }}</p>
-                <span>{{ card.diff }}</span>
-              </div>
-              <div v-else>
+          <div v-for="card in media">
+            <div v-if="card.result">
+              <div class="small-card red">
                 <h2>{{ card.item }}</h2>
                 <p>{{ card.number }}</p>
                 <span>{{ card.diff }}</span>
               </div>
             </div>
-          </span>
+            <div v-else>
+              <div class="small-card blue">
+                <h2>{{ card.item }}</h2>
+                <p>{{ card.number }}</p>
+                <span>{{ card.diff }}</span>
+              </div>
+            </div>
+          </div>
           <!-- <div class="small-card red">
             <h2>Visiters</h2>
             <p>12,367</p>
