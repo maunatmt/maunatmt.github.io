@@ -1,7 +1,10 @@
 {
-	"vtuber": [
-		{ "id": 0, "name": "Lize Helesta" },
-		{ "id": 1, "name": "Ange Katrina" },
-		{ "id": 2, "name": "Toko Inui" }
+	"media": [
+		{ "id": 0, "item": "Visiters", "number": "12,367", "diff": "+374" },
+		{ "id": 1, "item": "Page Views", "number": "85,372", "diff": "+2,526" },
+		{ "id": 2, "item": "Session Time", "number": "00:05:35", "diff": "-00:00:22" },
+		{ "id": 3, "item": "Instagram Followers", "number": "4,702", "diff": "+22" },
+		{ "id": 4, "item": "Youtube Followers", "number": "2,837", "diff": "+8" },
+		{ "id": 5, "item": "Twitter Followers", "number": "837", "diff": "+5" }
 	]
 }
