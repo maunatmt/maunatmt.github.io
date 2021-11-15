@@ -1,8 +1,8 @@
 $("#navTgl").on("click", function(){
     $("#wrap").toggleClass("stop-scroll").toggleClass('dark-color');
 });
-var app = new Vue({
-  el: '#app',
+var app1 = new Vue({
+  el: '#app1',
   data: {
       media: [],
       headers: {

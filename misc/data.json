@@ -6,5 +6,10 @@
 		{ "id": 3, "item": "Instagram Followers", "number": "4,702", "result": true, "diff": "+22" },
 		{ "id": 4, "item": "Youtube Followers", "number": "2,837", "result": true, "diff": "+8" },
 		{ "id": 5, "item": "Twitter Followers", "number": "837", "result": true, "diff": "+5" }
-	  ]
+	],
+	"social": [
+		{"media": "Instagram", "share": "32"},
+		{"media": "Youtube", "share": "28"},
+		{"media": "Facebook", "share": "22"}
+	]
 }

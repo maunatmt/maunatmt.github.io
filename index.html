@@ -52,7 +52,7 @@
       <section >
         <h1 id="article1">Media</h1>
         私たちのメインのゴールは購買者への認知の向上です。いかに多くの顧客にアプローチしてもらうかが重要です。せん今月の目標を越えられるように頑張っていきましょう。
-        <figure id="app" class="row center">
+        <figure class="app small-panels">
           <div v-for="card in media">
             <div v-if="card.result">
               <div class="small-card red">
@@ -69,36 +69,6 @@
               </div>
             </div>
           </div>
-          <!-- <div class="small-card red">
-            <h2>Visiters</h2>
-            <p>12,367</p>
-            <span>+374</span>
-          </div>
-          <div class="small-card red">
-            <h2>Page Views</h2>
-            <p>85,372</p>
-            <span>+2,526</span>
-          </div>
-          <div class="small-card blue">
-            <h2>Session Time</h2>
-            <p>00:05:35</p>
-            <span>-00:00:22</span>
-          </div>
-          <div class="small-card red">
-            <h2>Instagram Followers</h2>
-            <p>4,702</p>
-            <span>+22</span>
-          </div>
-          <div class="small-card red">
-            <h2>Youtube Followers</h2>
-            <p>2,837</p>
-            <span>+8</span>
-          </div>
-          <div class="small-card red">
-            <h2>Twitter Followers</h2>
-            <p>837</p>
-            <span>+5</span>
-          </div> -->
         </figure>
         <figure class="row">
           <div class="card">
@@ -106,7 +76,7 @@
             <div>
               <div class="app">
                 <ol>
-                    <li v-for="person in vtuber">{{ person.name }}</li>
+                    <li v-for="card in media">{{ card.item }}</li>
                 </ol>
               </div>
               <div class="center">
