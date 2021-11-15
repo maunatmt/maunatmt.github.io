@@ -50,6 +50,17 @@ figure {
 .card div ul li {
 	padding-right: 10px;
 }
+.small-panels {
+    display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	width: 100%;
+	text-align: center;
+}
+.small-panels div {
+    flex-basis: 30%;
+	margin: 5px;
+}
 .small-card {
 	box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
 	border-radius: 5px;
@@ -83,21 +94,14 @@ figure {
 .orange {
 	background: linear-gradient(-135deg, #f12711, #f5af19);
 }
-.center {
-	text-align: center;
-}
 .row {
     display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
 	width: 100%;
-	/* margin: 2em auto; */
 }
 .row div {
-    flex-basis: 30%;
-}
-.row div div {
-    margin: 10px;
+    flex-basis: 25%;
 }
 #before-footer {
 	background: mediumturquoise;
