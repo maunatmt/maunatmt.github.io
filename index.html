@@ -3,6 +3,7 @@
 <head>
 <meta charset="utf-8">
 <title>KPI Dashboard</title>
+<link rel="icon" type="image/x-icon" href="./images/favicon.ico">
 <meta name="viewport" content="width=device-width">
 <meta name="robots" content="noindex,nofollow">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"/>
@@ -52,7 +53,7 @@
       <section >
         <h1 id="article1">Media</h1>
         私たちのメインのゴールは購買者への認知の向上です。いかに多くの顧客にアプローチしてもらうかが重要です。せん今月の目標を越えられるように頑張っていきましょう。
-        <figure class="app small-panels">
+        <figure id="app1" class="small-panels">
           <div v-for="card in media">
             <div v-if="card.result">
               <div class="small-card red">
@@ -74,13 +75,35 @@
           <div class="card">
             <h2 class="green">Top3 Social Inflow</h2>
             <div>
-              <div class="app">
-                <ol>
-                    <li v-for="card in media">{{ card.item }}</li>
-                </ol>
-              </div>
-              <div class="center">
-                <div id="simple-chart" class="card center"></div>
+              <div id="app2">
+                <div v-if="selectedItem" class="tooltip">
+                  <p>Deaths as of: {{ selectedItem.date }}</p>
+                  <p class="count">
+                    {{
+                      selectedItem.total_deaths.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")
+                    }}
+                  </p>
+                </div>
+                <svg v-if="items" ref="svg" viewBox="0 0 600 400">
+                  <g :transform="`translate(${margin.left},${margin.top})`">
+                    <g>
+                      <rect
+                        v-for="(item, index) in items"
+                        :key="index"
+                        class="bar"
+                        :x="scaleX(item.date)"
+                        :y="scaleY(item.total_deaths)"
+                        :width="scaleX.bandwidth()"
+                        :height="height - scaleY(item.total_deaths)"
+                        @mouseover="selectedItem = item"
+                      />
+                    </g>
+                    <g v-if="items" ref="xAxis" :transform="`translate(0,${height})`">
+                    </g>
+                    <g v-if="items" ref="yAxis">
+                    </g>
+                  </g>
+                </svg>
               </div>
               <ul>
                 <li>40% of Sunny Street patients are homeless.</li>
@@ -91,14 +114,6 @@
           <div class="card">
             <h2 class="purple">Trend</h2>
             <div>
-              <div class="app">
-                <ol>
-                    <li v-for="person in vtuber">{{ person.name }}</li>
-                </ol>
-              </div>
-              <div class="center">
-                <div id="simple-chart" class="card center"></div>
-              </div>
               <ul>
                 <li>40% of Sunny Street patients are homeless.</li>
                 <li>Majority of the patients are male and are aged between 36 - 55 years old with the yougest being 1 year old.</li>
@@ -108,14 +123,8 @@
           <div class="card">
             <h2 class="orange">Grouping </h2>
             <div>
-              <div class="app">
-                <ol>
-                    <li v-for="person in vtuber">{{ person.name }}</li>
-                </ol>
-              </div>
-              <div class="center">
-                <div id="simple-chart" class="card center"></div>
-              </div>
+
+              
               <ul>
                 <li>40% of Sunny Street patients are homeless.</li>
                 <li>Majority of the patients are male and are aged between 36 - 55 years old with the yougest being 1 year old.</li>

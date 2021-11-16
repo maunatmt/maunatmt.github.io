@@ -1,15 +1,333 @@
 {
 	"media": [
-		{ "id": 0, "item": "Visiters", "number": "12,367", "result": true, "diff": "+374" },
-		{ "id": 1, "item": "Page Views", "number": "85,372", "result": true, "diff": "+2,526" },
+		{ "id": 0, "item": "Visiters", "number": "12,374", "result": true, "diff": "+374" },
+		{ "id": 1, "item": "Page Views", "number": "85,372", "result": true, "diff": "+372" },
 		{ "id": 2, "item": "Session Time", "number": "00:05:35", "result": false, "diff": "-00:00:22" },
-		{ "id": 3, "item": "Instagram Followers", "number": "4,702", "result": true, "diff": "+22" },
-		{ "id": 4, "item": "Youtube Followers", "number": "2,837", "result": true, "diff": "+8" },
-		{ "id": 5, "item": "Twitter Followers", "number": "837", "result": true, "diff": "+5" }
+		{ "id": 3, "item": "Instagram Followers", "number": "4,702", "result": true, "diff": "+202" },
+		{ "id": 4, "item": "Youtube Followers", "number": "2,837", "result": true, "diff": "+37" },
+		{ "id": 5, "item": "Twitter Followers", "number": "837", "result": false, "diff": "-13" }
 	],
 	"social": [
 		{"media": "Instagram", "share": "32"},
 		{"media": "Youtube", "share": "28"},
 		{"media": "Facebook", "share": "22"}
+	],
+	"flow": [
+		{
+			"date":"Jan 23",
+			"total_deaths":25
+		  },
+		  {
+			"date":"Jan 24",
+			"total_deaths":41
+		  },
+		  {
+			"date":"Jan 25",
+			"total_deaths":56
+		  },
+		  {
+			"date":"Jan 26",
+			"total_deaths":80
+		  },
+		  {
+			"date":"Jan 27",
+			"total_deaths":106
+		  },
+		  {
+			"date":"Jan 28",
+			"total_deaths":132
+		  },
+		  {
+			"date":"Jan 29",
+			"total_deaths":170
+		  },
+		  {
+			"date":"Jan 30",
+			"total_deaths":213
+		  },
+		  {
+			"date":"Jan 31",
+			"total_deaths":259
+		  },
+		  {
+			"date":"Feb 1",
+			"total_deaths":304
+		  },
+		  {
+			"date":"Feb 2",
+			"total_deaths":362
+		  },
+		  {
+			"date":"Feb 3",
+			"total_deaths":426
+		  },
+		  {
+			"date":"Feb 4",
+			"total_deaths":492
+		  },
+		  {
+			"date":"Feb 5",
+			"total_deaths":565
+		  },
+		  {
+			"date":"Feb 6",
+			"total_deaths":638
+		  },
+		  {
+			"date":"Feb 7",
+			"total_deaths":724
+		  },
+		  {
+			"date":"Feb 8",
+			"total_deaths":813
+		  },
+		  {
+			"date":"Feb 9",
+			"total_deaths":910
+		  },
+		  {
+			"date":"Feb 10",
+			"total_deaths":1018
+		  },
+		  {
+			"date":"Feb 11",
+			"total_deaths":1115
+		  },
+		  {
+			"date":"Feb 12",
+			"total_deaths":1261
+		  },
+		  {
+			"date":"Feb 13",
+			"total_deaths":1383
+		  },
+		  {
+			"date":"Feb 14",
+			"total_deaths":1526
+		  },
+		  {
+			"date":"Feb 15",
+			"total_deaths":1669
+		  },
+		  {
+			"date":"Feb 16",
+			"total_deaths":1775
+		  },
+		  {
+			"date":"Feb 17",
+			"total_deaths":1873
+		  },
+		  {
+			"date":"Feb 18",
+			"total_deaths":2009
+		  },
+		  {
+			"date":"Feb 19",
+			"total_deaths":2126
+		  },
+		  {
+			"date":"Feb 20",
+			"total_deaths":2247
+		  },
+		  {
+			"date":"Feb 21",
+			"total_deaths":2360
+		  },
+		  {
+			"date":"Feb 22",
+			"total_deaths":2460
+		  },
+		  {
+			"date":"Feb 23",
+			"total_deaths":2618
+		  },
+		  {
+			"date":"Feb 24",
+			"total_deaths":2699
+		  },
+		  {
+			"date":"Feb 25",
+			"total_deaths":2763
+		  },
+		  {
+			"date":"Feb 26",
+			"total_deaths":2800
+		  },
+		  {
+			"date":"Feb 27",
+			"total_deaths":2858
+		  },
+		  {
+			"date":"Feb 28",
+			"total_deaths":2923
+		  },
+		  {
+			"date":"Feb 29",
+			"total_deaths":2977
+		  },
+		  {
+			"date":"Mar 1",
+			"total_deaths":3050
+		  },
+		  {
+			"date":"Mar 2",
+			"total_deaths":3117
+		  },
+		  {
+			"date":"Mar 3",
+			"total_deaths":3202
+		  },
+		  {
+			"date":"Mar 4",
+			"total_deaths":3285
+		  },
+		  {
+			"date":"Mar 5",
+			"total_deaths":3387
+		  },
+		  {
+			"date":"Mar 6",
+			"total_deaths":3494
+		  },
+		  {
+			"date":"Mar 7",
+			"total_deaths":3599
+		  },
+		  {
+			"date":"Mar 8",
+			"total_deaths":3827
+		  },
+		  {
+			"date":"Mar 9",
+			"total_deaths":4025
+		  },
+		  {
+			"date":"Mar 10",
+			"total_deaths":4296
+		  },
+		  {
+			"date":"Mar 11",
+			"total_deaths":4628
+		  },
+		  {
+			"date":"Mar 12",
+			"total_deaths":4981
+		  },
+		  {
+			"date":"Mar 13",
+			"total_deaths":5428
+		  },
+		  {
+			"date":"Mar 14",
+			"total_deaths":5833
+		  },
+		  {
+			"date":"Mar 15",
+			"total_deaths":6520
+		  },
+		  {
+			"date":"Mar 16",
+			"total_deaths":7162
+		  },
+		  {
+			"date":"Mar 17",
+			"total_deaths":7979
+		  },
+		  {
+			"date":"Mar 18",
+			"total_deaths":8951
+		  },
+		  {
+			"date":"Mar 19",
+			"total_deaths":10030
+		  },
+		  {
+			"date":"Mar 20",
+			"total_deaths":11386
+		  },
+		  {
+			"date":"Mar 21",
+			"total_deaths":13011
+		  },
+		  {
+			"date":"Mar 22",
+			"total_deaths":14640
+		  },
+		  {
+			"date":"Mar 23",
+			"total_deaths":16514
+		  },
+		  {
+			"date":"Mar 24",
+			"total_deaths":18895
+		  },
+		  {
+			"date":"Mar 25",
+			"total_deaths":21283
+		  },
+		  {
+			"date":"Mar 26",
+			"total_deaths":24074
+		  },
+		  {
+			"date":"Mar 27",
+			"total_deaths":27345
+		  },
+		  {
+			"date":"Mar 28",
+			"total_deaths":30863
+		  },
+		  {
+			"date":"Mar 29",
+			"total_deaths":34074
+		  },
+		  {
+			"date":"Mar 30",
+			"total_deaths":37783
+		  },
+		  {
+			"date":"Mar 31",
+			"total_deaths":42320
+		  },
+		  {
+			"date":"Apr 1",
+			"total_deaths":47210
+		  },
+		  {
+			"date":"Apr 2",
+			"total_deaths":53189
+		  },
+		  {
+			"date":"Apr 3",
+			"total_deaths":58909
+		  },
+		  {
+			"date":"Apr 4",
+			"total_deaths":64708
+		  },
+		  {
+			"date":"Apr 5",
+			"total_deaths":69447
+		  },
+		  {
+			"date":"Apr 6",
+			"total_deaths":74678
+		  },
+		  {
+			"date":"Apr 7",
+			"total_deaths":82063
+		  },
+		  {
+			"date":"Apr 8",
+			"total_deaths":88480
+		  },
+		  {
+			"date":"Apr 9",
+			"total_deaths":95714
+		  },
+		  {
+			"date":"Apr 10",
+			"total_deaths":102687
+		  }
 	]
 }
