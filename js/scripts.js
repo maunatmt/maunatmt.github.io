@@ -32,8 +32,8 @@ new Vue({
   
   data() {
     return {
-      outsideWidth: 300,
-      outsideHeight: 200,
+      outsideWidth: 600,
+      outsideHeight: 400,
       margin: {
         left: 50,
         top: 10,
@@ -79,9 +79,9 @@ new Vue({
   },
   
   created () {
-    axios.get('https://api.github.com/gists/903c1e837ad98fc7e50b693af78b8e7e')
+    axios.get('https://raw.githubusercontent.com/maunatmt/maunatmt.github.io/main/misc/data.json')
       .then(response => {
-        this.items = this.statesJson = JSON.parse(response.data.files['covid_deaths.json'].content)
+        this.items = this.response.flows
         this.selectedItem = this.items[this.items.length - 1]
       })
       .catch(error => {
