@@ -52,7 +52,7 @@
     <article>
       <section >
         <h1 id="article1">Media</h1>
-        私たちのメインのゴールは購買者への認知の向上です。いかに多くの顧客にアプローチしてもらうかが重要です。せん今月の目標を越えられるように頑張っていきましょう。
+        Our team's goal is to raise awareness among our clients. It is important to get as many customers as possible to approach our media sites. Let's take actions for improving our products based on values of KPIs for this month.
         <figure id="app1" class="small-panels">
           <div v-for="card in media">
             <div v-if="card.result">
@@ -69,6 +69,14 @@
                 <span>{{ card.diff }}</span>
               </div>
             </div>
+          </div>
+        </figure>
+        <figure class="small-panels">
+          <div class="small-card red">
+            <h2>Achieved</h2>
+          </div>
+          <div class="small-card blue">
+            <h2>Shortfall</h2>
           </div>
         </figure>
         <figure class="row">
