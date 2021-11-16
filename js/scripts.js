@@ -13,7 +13,7 @@ new Vue({
         "Access-Control-Allow-Headers": "Origin, Content-Type, X-Auth-Token"
       }
   },
-  mounted: function() {
+  created: function() {
       var self = this;
       axios
           .get('https://raw.githubusercontent.com/maunatmt/maunatmt.github.io/main/misc/data.json', self.headers)
@@ -40,7 +40,14 @@ new Vue({
         right: 10,
         bottom: 40,
       },
-      items: [],
+      items: [{
+        "date":"Jan 23",
+        "total_deaths":25
+      },
+      {
+        "date":"Jan 24",
+        "total_deaths":41
+      }],
       selectedItem: null
     }
   },
@@ -77,11 +84,23 @@ new Vue({
       this.updateYAxis()
     }
   },
-  
+  mounted: function() {
+    var self = this;
+    axios
+        .get('https://raw.githubusercontent.com/maunatmt/maunatmt.github.io/main/misc/data.json', self.headers)
+        .then(function(response) {
+          // this.items = this.statesJson = JSON.parse(response.data.files['covid_deaths.json'].content)
+          this.selectedItem = this.items[this.items.length - 1]
+        })
+        .catch(function(error) {
+            console.log('Failed to load.', error);
+        })
+  },
   created () {
-    axios.get('https://raw.githubusercontent.com/maunatmt/maunatmt.github.io/main/misc/data.json')
+    axios
+      .get('https://api.github.com/gists/903c1e837ad98fc7e50b693af78b8e7e')
       .then(response => {
-        this.items = this.response.flows
+        // this.items = this.statesJson = JSON.parse(response.data.files['covid_deaths.json'].content)
         this.selectedItem = this.items[this.items.length - 1]
       })
       .catch(error => {
