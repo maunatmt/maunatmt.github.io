@@ -1,10 +1,11 @@
 $("#navTgl").on("click", function(){
     $("#wrap").toggleClass("stop-scroll").toggleClass('dark-color');
 });
-var app1 = new Vue({
+new Vue({
   el: '#app1',
   data: {
       media: [],
+      social: [],
       headers: {
         'Content-Type': 'application/json;charset=UTF-8',
         "Access-Control-Allow-Origin": "*",
@@ -18,12 +19,91 @@ var app1 = new Vue({
           .get('https://raw.githubusercontent.com/maunatmt/maunatmt.github.io/main/misc/data.json', self.headers)
           .then(function(response) {
               self.media = response.data.media;
+              self.social = response.data.social;
           })
           .catch(function(error) {
               console.log('Failed to load.', error);
           })
   }
 })
+
+new Vue({
+  el: '#app2',
+  
+  data() {
+    return {
+      outsideWidth: 300,
+      outsideHeight: 200,
+      margin: {
+        left: 50,
+        top: 10,
+        right: 10,
+        bottom: 40,
+      },
+      items: [],
+      selectedItem: null
+    }
+  },
+  
+  computed: {
+    width() {
+      return this.outsideWidth - this.margin.left - this.margin.right
+    },
+    
+    height() {
+      return this.outsideHeight - this.margin.top - this.margin.bottom
+    },
+    
+    scaleX () {
+     return d3.scaleBand()
+       .rangeRound([0, this.width]).padding(0.1)
+       .domain(this.items.map(x => x.date)) 
+    },
+    
+    scaleY () {
+      return d3.scaleLinear()
+        .rangeRound([this.height, 0])
+        .domain([0, Math.max(...this.items.map(x => x.total_deaths))])
+    },
+    
+    xAxisTickValues () {
+    	 return this.items
+    }
+  },
+  
+  watch: {
+    items () {
+      this.updateXAxis()
+      this.updateYAxis()
+    }
+  },
+  
+  created () {
+    axios.get('https://api.github.com/gists/903c1e837ad98fc7e50b693af78b8e7e')
+      .then(response => {
+        this.items = this.statesJson = JSON.parse(response.data.files['covid_deaths.json'].content)
+        this.selectedItem = this.items[this.items.length - 1]
+      })
+      .catch(error => {
+      console.log(error)
+    })
+  },
+  
+  methods: {
+    updateXAxis () {
+      let tickValues = this.scaleX.domain().filter((date, i) => { return i % 7 === 0 })
+      d3.select(this.$refs.xAxis)
+        .attr('class', 'axis axis--x')
+        .call(d3.axisBottom(this.scaleX).tickValues(tickValues))
+    },
+    
+    updateYAxis () {
+      d3.select(this.$refs.yAxis).append('g')
+        .attr('class', 'axis axis--y')
+        .call(d3.axisLeft(this.scaleY))
+    }
+  }
+});
 
 var margin = {
   top: 30, 
