@@ -12,7 +12,7 @@
 		{"media": "Youtube", "share": "28"},
 		{"media": "Facebook", "share": "22"}
 	],
-	"flow": [
+	"flows": [
 		{
 			"date":"Jan 23",
 			"total_deaths":25

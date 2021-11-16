@@ -56,6 +56,7 @@ figure {
 	justify-content: center;
 	width: 100%;
 	text-align: center;
+	margin: 10px;
 }
 .small-panels div {
     flex-basis: 30%;
@@ -101,7 +102,7 @@ figure {
 	width: 100%;
 }
 .row div {
-    flex-basis: 25%;
+    flex-basis: 30%;
 }
 #before-footer {
 	background: mediumturquoise;
