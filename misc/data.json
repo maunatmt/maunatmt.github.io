@@ -45,7 +45,7 @@
 			"label": "Share",
 			"data": [190, 160, 150],
 			"borderColor": "rgb(235, 0, 6)",
-			"backgroundColor": "rgb(235, 0, 6)",
+			"backgroundColor": "rgb(235, 0, 6)"
 		}]
 	},
 	"grouping": {
