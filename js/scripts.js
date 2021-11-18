@@ -120,6 +120,7 @@ new Vue({
                 text: 'Stay Time',
               },
               ticks: {
+                beginAtZero: true,
                 stepSize: 10,
                 callback: function(value, index, values){
                   return  value +  'min'
