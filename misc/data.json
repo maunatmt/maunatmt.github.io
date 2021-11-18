@@ -1,16 +1,11 @@
 {
 	"media": [
-		{ "id": 0, "item": "Visiters", "number": "12,374", "result": true, "diff": "+374" },
-		{ "id": 1, "item": "Page Views", "number": "85,372", "result": true, "diff": "+372" },
-		{ "id": 2, "item": "Session Time", "number": "00:05:35", "result": false, "diff": "-00:00:22" },
-		{ "id": 3, "item": "Instagram Followers", "number": "4,702", "result": true, "diff": "+202" },
-		{ "id": 4, "item": "Youtube Followers", "number": "2,837", "result": true, "diff": "+37" },
-		{ "id": 5, "item": "Twitter Followers", "number": "837", "result": false, "diff": "-13" }
-	],
-	"social": [
-		{"media": "Instagram", "share": "32"},
-		{"media": "Youtube", "share": "28"},
-		{"media": "Facebook", "share": "22"}
+		{ "item": "Visiters", "number": "12,374", "result": true, "diff": "+374" },
+		{ "item": "Page Views", "number": "85,372", "result": true, "diff": "+372" },
+		{ "item": "Session Time", "number": "00:05:35", "result": false, "diff": "-00:00:22" },
+		{ "item": "Instagram Followers", "number": "4,702", "result": true, "diff": "+202" },
+		{ "item": "Youtube Followers", "number": "2,837", "result": true, "diff": "+37" },
+		{ "item": "Twitter Followers", "number": "837", "result": false, "diff": "-13" }
 	],
 	"trend": {
 		"labels": ["Sep,2021", "Oct,2021", "Nov,2021"],
@@ -18,7 +13,7 @@
 			"label": "Twitter",
 			"data": [190, 220, 160],
 			"borderColor": "rgb(28, 133, 224)",
-			"backgroundColor": "rgba(0, 0, 0, 0)",
+			"backgroundColor": "rgb(28, 133, 224)",
 			"lineTension": 0,
 			"fill": false
 		}, {
@@ -43,5 +38,14 @@
 			"lineTension": 0,
 			"fill": false
 		}]
-	}
+	},
+	"grouping": [{
+		"label": "Male",
+		"data": [{"x":20,"y":10},{"x":10,"y":13},{"x":20,"y":5},{"x":40,"y":10},{"x":10,"y":20}],
+		"backgroundColor": "rgba(241, 107, 141, 1)"
+	},{
+		"label": "Female",
+		"data": [{"x":30,"y":5},{"x":10,"y":40},{"x":40,"y":10},{"x":4,"y":20},{"x":15,"y":35}],
+		"backgroundColor": "rgba( 31, 167, 165, 1)"
+	}]
 }
