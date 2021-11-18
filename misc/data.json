@@ -12,18 +12,32 @@
 		{"media": "Youtube", "share": "28"},
 		{"media": "Facebook", "share": "22"}
 	],
-	"flows": [
-		{
-			"date":"Jan 23",
-			"total_deaths":25
-		  },
-		  {
-			"date":"Jan 24",
-			"total_deaths":41
-		  },
-		  {
-			"date":"Jan 25",
-			"total_deaths":56
-		  }
-	]
+	"trend": {
+		"labels": ["Sep,2021", "Oct,2021", "Nov,2021"],
+		"datasets": [{
+			"label": "Twitter",
+			"data": [190, 220, 160],
+			"borderColor": "rgb(28, 133, 224)",
+			"lineTension": 0,
+			"fill": false
+		}, {
+			"label": "Facebook",
+			"data": [270, 250, 280],
+			"borderColor": "rgb(46, 63, 121)",
+			"lineTension": 0,
+			"fill": false
+		}, {
+		  "label": "Instagram",
+		  "data": [630, 560, 550],
+		  "borderColor": "rgb(165, 0, 137)",
+		  "lineTension": 0,
+		  "fill": false
+		}, {
+		  "label": "Youtube",
+		  "data": [70, 90, 140],
+		  "borderColor": "rgb(235, 0, 6)",
+		  "lineTension": 0,
+		  "fill": false
+		}]
+	}
 }

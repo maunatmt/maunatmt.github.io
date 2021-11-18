@@ -15,10 +15,11 @@
   src="https://code.jquery.com/jquery-3.6.0.min.js"
   integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
   crossorigin="anonymous"></script>
-<script src="https://d3js.org/d3.v7.min.js"></script>
 <script src="https://www.promisejs.org/polyfills/promise-7.0.4.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js"></script>
+<script src="https://unpkg.com/vue-chartjs/dist/vue-chartjs.min.js"></script>
 </head>
 <body>
 <input type="checkbox" id="navTgl">
@@ -51,8 +52,8 @@
     </header>
     <article>
       <section >
-        <h1 id="article1">Media</h1>
-        <ul>
+        <h1 id="article1">Media KPIs - 30 days</h1>
+        <ul style="color:gray">
           <li>Our team's goal is to raise awareness among our clients. </li>
           <li>It is important to get as many customers as possible to approach our media sites.</li>
           <li>Let's take actions for improving our products based on values of KPIs for this month.</li>
@@ -85,41 +86,14 @@
         </figure>
         <figure class="row">
           <div class="card">
-            <h2 class="green">Top3 Social Inflow</h2>
+            <h2 class="green">Social Inflow Trend</h2>
             <div>
-              <div id="app2">
-                <div v-if="selectedItem" class="tooltip">
-                  <p>Deaths as of: {{ selectedItem.date }}</p>
-                  <p class="count">
-                    {{
-                      selectedItem.total_deaths.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")
-                    }}
-                  </p>
-                </div>
-                <svg v-if="items" ref="svg" viewBox="0 0 600 400">
-                  <g :transform="`translate(${margin.left},${margin.top})`">
-                    <g>
-                      <rect
-                        v-for="(item, index) in items"
-                        :key="index"
-                        class="bar"
-                        :x="scaleX(item.date)"
-                        :y="scaleY(item.total_deaths)"
-                        :width="scaleX.bandwidth()"
-                        :height="height - scaleY(item.total_deaths)"
-                        @mouseover="selectedItem = item"
-                      />
-                    </g>
-                    <g v-if="items" ref="xAxis" :transform="`translate(0,${height})`">
-                    </g>
-                    <g v-if="items" ref="yAxis">
-                    </g>
-                  </g>
-                </svg>
+              <div id="trend" style="width:360px">
+                <canvas id="myChart"></canvas>
               </div>
               <ul>
-                <li>40% of Sunny Street patients are homeless.</li>
-                <li>Majority of the patients are male and are aged between 36 - 55 years old with the yougest being 1 year old.</li>
+                <li>Instagram keeps top share but the number is getting increased.</li>
+                <li>The number of inflow from Youtube is getting increased and it seems to exceed the one of Twitter next month.</li>
               </ul>
             </div>
           </div>

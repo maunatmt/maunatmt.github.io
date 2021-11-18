@@ -13,7 +13,7 @@ new Vue({
         "Access-Control-Allow-Headers": "Origin, Content-Type, X-Auth-Token"
       }
   },
-  created: function() {
+  mounted: function() {
       var self = this;
       axios
           .get('https://raw.githubusercontent.com/maunatmt/maunatmt.github.io/main/misc/data.json', self.headers)
@@ -27,176 +27,64 @@ new Vue({
   }
 })
 
-new Vue({
-  el: '#app2',
-  
-  data() {
-    return {
-      outsideWidth: 600,
-      outsideHeight: 400,
-      margin: {
-        left: 50,
-        top: 10,
-        right: 10,
-        bottom: 40,
-      },
-      items: [{
-        "date":"Jan 23",
-        "total_deaths":25
-      },
-      {
-        "date":"Jan 24",
-        "total_deaths":41
-      }],
-      selectedItem: null
+var app = new Vue({
+  el: '#trend',
+  data: {
+    trend: {
+      labels: ['Sep,2021', 'Oct,2021', 'Nov,2021'],
+      datasets: [{
+          label: 'Twitter',
+          data: [190, 220, 160],
+          borderColor: "rgb(28, 133, 224)",
+          lineTension: 0,
+          fill: false
+      }, {
+          label: 'Facebook',
+          data: [270, 250, 280],
+          borderColor: "rgb(46, 63, 121)",
+          lineTension: 0,
+          fill: false
+      }, {
+        label: 'Instagram',
+        data: [630, 560, 550],
+        borderColor: "rgb(165, 0, 137)",
+        lineTension: 0,
+        fill: false
+      }, {
+        label: 'Youtube',
+        data: [70, 90, 140],
+        borderColor: "rgb(235, 0, 6)",
+        lineTension: 0,
+        fill: false
+      }]
     }
-  },
-  
-  computed: {
-    width() {
-      return this.outsideWidth - this.margin.left - this.margin.right
-    },
-    
-    height() {
-      return this.outsideHeight - this.margin.top - this.margin.bottom
-    },
-    
-    scaleX () {
-     return d3.scaleBand()
-       .rangeRound([0, this.width]).padding(0.1)
-       .domain(this.items.map(x => x.date)) 
-    },
-    
-    scaleY () {
-      return d3.scaleLinear()
-        .rangeRound([this.height, 0])
-        .domain([0, Math.max(...this.items.map(x => x.total_deaths))])
-    },
-    
-    xAxisTickValues () {
-    	 return this.items
-    }
-  },
-  
-  watch: {
-    items () {
-      this.updateXAxis()
-      this.updateYAxis()
-    }
-  },
-  mounted: function() {
-    var self = this;
-    axios
-        .get('https://raw.githubusercontent.com/maunatmt/maunatmt.github.io/main/misc/data.json', self.headers)
-        .then(function(response) {
-          // this.items = this.statesJson = JSON.parse(response.data.files['covid_deaths.json'].content)
-          this.selectedItem = this.items[this.items.length - 1]
-        })
-        .catch(function(error) {
-            console.log('Failed to load.', error);
-        })
   },
   created () {
     axios
-      .get('https://api.github.com/gists/903c1e837ad98fc7e50b693af78b8e7e')
+      .get('https://raw.githubusercontent.com/maunatmt/maunatmt.github.io/main/misc/data.json')
       .then(response => {
-        // this.items = this.statesJson = JSON.parse(response.data.files['covid_deaths.json'].content)
-        this.selectedItem = this.items[this.items.length - 1]
+        // this.trend = response.data.trend;
       })
       .catch(error => {
       console.log(error)
     })
   },
-  
-  methods: {
-    updateXAxis () {
-      let tickValues = this.scaleX.domain().filter((date, i) => { return i % 7 === 0 })
-      d3.select(this.$refs.xAxis)
-        .attr('class', 'axis axis--x')
-        .call(d3.axisBottom(this.scaleX).tickValues(tickValues))
-    },
-    
-    updateYAxis () {
-      d3.select(this.$refs.yAxis).append('g')
-        .attr('class', 'axis axis--y')
-        .call(d3.axisLeft(this.scaleY))
-    }
+  mounted: function(){
+    var ctx = document.getElementById('myChart').getContext('2d');
+    var options = {
+      scales: {
+          yAxes: [{
+              ticks: {
+                  beginAtZero: true
+              }
+          }]
+      }
+  };
+    var data = trend;
+    var myChart = new Chart(ctx, {
+      type: 'line',
+      data: data,
+      options: options
+    });
   }
 });
-
-var margin = {
-  top: 30, 
-  right: 30, 
-  bottom: 30, 
-  left: 80
-};
-
-var size = {
-width: 300 - margin.left - margin.right,
-height: 150 - margin.top - margin.bottom
-}
-
-var data = [
-  {'publishedDate': '2017-01-07','rank': 14},
-  {'publishedDate': '2017-01-16','rank': 13},
-  {'publishedDate': '2017-01-23','rank': 7},
-  {'publishedDate': '2017-01-30','rank': 10}
-];
-
-var data2 = [
-  {'publishedDate': '2017-01-07','rank': 6},
-  {'publishedDate': '2017-01-16','rank': 6},
-  {'publishedDate': '2017-01-23','rank': 4},
-  {'publishedDate': '2017-01-30','rank': 18}
-];
-
-var svg = d3.select("#simple-chart")
-.append("svg")
-.attr("width", size.width + margin.left + margin.right)
-.attr("height", size.height + margin.top + margin.bottom)
-.append("g")
-.attr("transform", "translate(" + margin.left + "," + margin.top + ")");
-
-var xScale = d3.scaleTime()
-.domain([new Date(data[0].publishedDate),new Date(data[data.length - 1].publishedDate)])
-.range([0,size.width]);
-
-var yScale = d3.scaleLinear()
-.domain([1,22])
-.range([size.height,0]);
-
-// svg.append("g")
-//   .call(
-//     d3.axisLeft(yScale)
-//       .ticks(5)
-//    )
-  // .append("text")
-  // .attr("text-anchor", "middle")
-  // .attr("fill", "black")
-  // .attr("x",-50)
-  // .attr("y",size.height/2)
-  // .attr("font-size", "10pt")
-  // .text("Sales");
-
-svg.append("g")
-.attr("transform", "translate(0," + size.height + ")")
-.call(
-  d3.axisBottom(xScale)
-    .tickFormat(d3.timeFormat("%m-%d"))
- )
- .append("text")
- .attr("stroke","gray");
-var line = d3.line()
-  .x(function(d,i) { return xScale(new Date(d.publishedDate)); })
-  .y(function(d,i) { return yScale(d.rank); });
-svg.append("path")
-  .datum(data)
-  .attr("d",line)
-  .attr("stroke-width", 3)
-  .attr("stroke","dodgerblue")
-  .attr("fill","none");
-svg.append("path")
-  .datum(data2)
-  .attr("d",line)
-  .attr("stroke","gray")
-  .attr("fill","none");
