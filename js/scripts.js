@@ -56,9 +56,8 @@ new Vue({
           maintainAspectRatio: false,
           scales: {  
             y: {
-                ticks: {
+                  beginAtZero: true,
                   stepSize: 100
-                }
               }
           }
         }

@@ -28,9 +28,8 @@
 <nav class="menu">
 	<h2 class="logo">Dashboard</h2>
 	<ul>
-    <li><a href="#article1">Media</a></li>
-    <li><a href="#article2">Commerse</a></li>
-    <li><a href="#article3">Customer Support</a></li>
+    <li><a href="#article1">Media KPIs</a></li>
+    <li><a href="#article2">e-Commerse KPIs</a></li>
     <!-- <li><a href="#article3">Tableau&nbsp;<i classs="fas fa-external-link-alt"></i></a></li> -->
   </ul>
 </nav>
@@ -43,9 +42,8 @@
       <h1 class="logo">KPI Dashboard<small> for reuse business</small></h1>
       <nav>
         <ul>
-          <li><a href="#article1">Media</a></li>
-          <li><a href="#article2">Commerse</a></li>
-          <li><a href="#article3">Customer Support</a></li>
+          <li><a href="#article1">Media KPIs</a></li>
+          <li><a href="#article2">e-Commerse KPIs</a></li>
           <!-- <li><a href="#article3">Tableau&nbsp;<i class="fas fa-external-link-alt"></i></a></li> -->
         </ul>
       </nav>
@@ -53,6 +51,83 @@
     <article>
       <section >
         <h1 id="article1">Media KPIs - 30 days</h1>
+        <ul style="color:gray">
+          <li>Our team's goal is to raise awareness among our clients. </li>
+          <li>It is important to get as many customers as possible to approach our media sites.</li>
+          <li>Let's take actions for improving our products based on values of KPIs for this month.</li>
+        </ul>
+        <figure class="small-panels">
+          <div class="small-card red">
+            <h2>Achieved</h2>
+          </div>
+          <div class="small-card blue">
+            <h2>Shortfall</h2>
+          </div>
+        </figure>
+        <figure id="figures" class="small-panels">
+          <div v-for="card in media">
+            <div v-if="card.result">
+              <div class="small-card red">
+                <h2>{{ card.item }}</h2>
+                <p>{{ card.number }}</p>
+                <span>{{ card.diff }}</span>
+              </div>
+            </div>
+            <div v-else>
+              <div class="small-card blue">
+                <h2>{{ card.item }}</h2>
+                <p>{{ card.number }}</p>
+                <span>{{ card.diff }}</span>
+              </div>
+            </div>
+          </div>
+        </figure>
+        <figure id="chart" class="row">
+          <div class="card">
+            <h2 class="green">Social Followers Trend</h2>
+            <div>
+              <div class="chart-canvas">
+                <canvas id="trend-chart"></canvas>
+              </div>
+              <ul>
+                <li>Instagram keeps the top share but the number tends to decrease.</li>
+                <li>The number of inflow from Youtube is continuing to increase and it seems it will exceed the one of Twitter next month.</li>
+              </ul>
+            </div>
+          </div>
+          <div class="card">
+            <h2 class="purple">Social Inflow Ratio Top3 </h2>
+            <div>
+              <div class="chart-canvas">
+                <canvas id="ranking-chart"></canvas>
+              </div>
+              <ul>
+                <li>Most visiters come to our official site via Instagram.</li>
+                <li>The ratio of Instagram is a nearly double score of the second position that Facebook.</li>
+              </ul>
+            </div>
+          </div>
+          <div class="card">
+            <h2 class="orange">Customer Grouping </h2>
+            <div>
+              <div class="chart-canvas">
+                <canvas id="grouping-chart"></canvas>
+              </div>
+              <ul>
+                <li>Women between 10s and 20s tend to use our site longer than other segments.</li>
+                <li>Women tend to use our site longer than men.</li>
+              </ul>
+            </div>
+          </div>
+        </figure>
+      </section>
+    </article>
+    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"  width="100%" height="50" viewBox="0 0 100 100" preserveAspectRatio="none" class="svg">
+      <path d="M0,0 100,0 100,5 0,100 Z" fill="#48D1CC" />
+      </svg>
+    <article>
+      <section >
+        <h1 id="article2">e-Commerce KPIs - 30 days</h1>
         <ul style="color:gray">
           <li>Our team's goal is to raise awareness among our clients. </li>
           <li>It is important to get as many customers as possible to approach our media sites.</li>
@@ -120,55 +195,6 @@
                 <li>The number of inflow from Youtube is getting increased and it seems to exceed the one of Twitter next month.</li>
               </ul>
             </div>
-          </div>
-        </figure>
-      </section>
-    </article>
-    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"  width="100%" height="50" viewBox="0 0 100 100" preserveAspectRatio="none" class="svg">
-      <path d="M0,0 100,0 100,5 0,100 Z" fill="#48D1CC" />
-      </svg>
-    <article>
-      <section >
-        <h1 id="article2">Commerse</h1>
-        私たちのメインのゴールは購買者への認知の向上です。Web検索の結果からいかに多くの顧客にアプローチしてもらうかが重要です。今月の目標を越えられるように頑張っていきましょう。
-        <figure class="row">
-          <div class="card imp">
-            <h1>Patients</h1>
-            <p>837</p>
-            <ul>
-              <li>40% of Sunny Street patients are homeless.</li>
-              <li>Majority of the patients are male and are aged between 36 - 55 years old with the yougest being 1 year old.</li>
-            </ul>
-          </div>
-          <div class="card">
-            <p>Gender</p>
-            <div class="row">
-              <div>Male</div>
-              <div>Female</div>
-              <div>Unknown</div>
-              <div>Other</div>
-            </div>
-            <p>Ages</p>
-            <div class="row">
-              <div>5-25</div>
-              <div>26-35</div>
-              <div>36-55</div>
-            </div>
-          </div>
-        </figure>
-
-        <figure class="row center">
-          <div>
-            <h1>Patients</h1>
-            <p>837</p>
-          </div>
-          <div>
-            <h1>Patients</h1>
-            <p>837</p>
-          </div>
-          <div>
-            <h1>Patients</h1>
-            <p>837</p>
           </div>
         </figure>
       </section>
