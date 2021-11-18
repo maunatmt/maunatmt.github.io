@@ -33,6 +33,8 @@ new Vue({
   data: {
     labels: [],
     datasets:[],
+    rankingLabels: [],
+    rankingDatasets:[],
     groupingLabels: [],
     groupingDatasets:[],
     headers: {
@@ -126,6 +128,8 @@ new Vue({
     axios.get('https://raw.githubusercontent.com/maunatmt/maunatmt.github.io/main/misc/data.json', self.headers).then(response =>{
       this.datasets = response.data.trend.datasets;
       this.labels = response.data.trend.labels;
+      this.rankingLabels = response.data.ranking.labels;
+      this.rankingDatasets = response.data.ranking.datasets;
       this.groupingLabels = response.data.grouping.labels;
       this.groupingDatasets = response.data.grouping.datasets;
       this.displayTrend();
