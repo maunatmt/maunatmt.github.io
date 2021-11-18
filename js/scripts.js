@@ -89,7 +89,7 @@ new Vue({
       var myChart = new Chart(ctx, {
         type: 'scatter',
         data: {
-            // labels: this.groupingLabels,
+            labels: this.groupingLabels,
             datasets: this.groupingDatasets
         },
         options: {
@@ -123,7 +123,8 @@ new Vue({
     axios.get('https://raw.githubusercontent.com/maunatmt/maunatmt.github.io/main/misc/data.json').then(response =>{
       this.datasets = response.data.trend.datasets;
       this.labels = response.data.trend.labels;
-      this.labels = response.data.trend.labels;
+      this.groupingLabels = response.data.grouping.labels;
+      this.groupingDatasets = response.data.grouping.datasets;
       this.displayTrend();
       this.displayRanking();
       this.displayGrouping();
