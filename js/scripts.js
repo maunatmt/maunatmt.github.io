@@ -34,7 +34,11 @@ new Vue({
     labels: [],
     datasets:[],
     groupingLabels: [],
-    groupingDatasets:[]
+    groupingDatasets:[],
+    headers: {
+      'Content-Type': 'application/json;charset=UTF-8',
+      "Access-Control-Allow-Origin": "*",
+    }
   },
   methods:{
     displayTrend: function(){
@@ -119,7 +123,7 @@ new Vue({
     }
   },
   mounted: function(){
-    axios.get('https://raw.githubusercontent.com/maunatmt/maunatmt.github.io/main/misc/data.json').then(response =>{
+    axios.get('https://raw.githubusercontent.com/maunatmt/maunatmt.github.io/main/misc/data.json', self.headers).then(response =>{
       this.datasets = response.data.trend.datasets;
       this.labels = response.data.trend.labels;
       this.groupingLabels = response.data.grouping.labels;
