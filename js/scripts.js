@@ -49,13 +49,11 @@ new Vue({
           responsive: true,
           maintainAspectRatio: false,
           scales: {  
-            yAxes: [
-              {
+            y: {
                 ticks: {
                   stepSize: 100
                 }
               }
-            ]
           }
         }
       });
@@ -73,13 +71,11 @@ new Vue({
           responsive: true,
           maintainAspectRatio: false,
           scales: {  
-            yAxes: [
-              {
-                ticks: {
-                  stepSize: 100
-                }
+            y: {
+              ticks: {
+                stepSize: 100
               }
-            ]
+            }
           }
         }
       });
@@ -96,7 +92,7 @@ new Vue({
           responsive: true,
           maintainAspectRatio: false,
           scales: {
-            xAxes: [{
+            x: {
               scaleLabel: {
                   display: true,
                   labelString: 'Age',
@@ -104,16 +100,19 @@ new Vue({
               ticks: {
                   stepSize: 10
               },
-            }],
-            yAxes: [{
+            },
+            y: {
               scaleLabel: {
                 display: true,
                 labelString: 'Stay Time',
               },
               ticks: {
-                stepSize: 100
+                stepSize: 10,
+                callback: function(value, index, values){
+                  return  value +  'min'
+                }
               }
-            }]
+            }
           }
         }
       });
