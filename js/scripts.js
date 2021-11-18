@@ -86,9 +86,11 @@ new Vue({
               }
             }
           },
-          legend: {
-            display: false
-         }
+          plugins: {
+            legend : {
+                     display : false
+              }
+          }
         }
       });
     },
