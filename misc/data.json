@@ -39,6 +39,28 @@
 			"fill": false
 		}]
 	},
+	"ranking": {
+		"labels": ["Twitter", "Facebook", "Instagram"],
+		"datasets": [{
+			"data": 190,
+			"borderColor": "rgb(46, 63, 121)",
+			"backgroundColor": "rgb(46, 63, 121)",
+			"lineTension": 0,
+			"fill": false
+		}, {
+			"data": 160,
+			"borderColor": "rgb(46, 63, 121)",
+			"backgroundColor": "rgb(46, 63, 121)",
+			"lineTension": 0,
+			"fill": false
+		}, {
+			"data": 150,
+			"borderColor": "rgb(46, 63, 121)",
+			"backgroundColor": "rgb(46, 63, 121)",
+			"lineTension": 0,
+			"fill": false
+		}]
+	},
 	"grouping": {
 		"labels": [
 			"ラベル１",
