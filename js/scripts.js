@@ -2,7 +2,7 @@ $("#navTgl").on("click", function(){
     $("#wrap").toggleClass("stop-scroll").toggleClass('dark-color');
 });
 new Vue({
-  el: '#app1',
+  el: '#figures',
   data: {
       media: [],
       social: [],
@@ -28,20 +28,79 @@ new Vue({
   }
 })
 
-var app = new Vue({
-  el: '#trend',
+new Vue({
+  el: '#chart',
   data: {
     labels: [],
     datasets:[]
   },
   methods:{
-    displayGraph: function(){
-      var ctx = document.getElementById('myChart').getContext('2d');
+    displayTrend: function(){
+      var ctx = document.getElementById('trend-chart').getContext('2d');
       var myChart = new Chart(ctx, {
-      type: 'line',
-      data: {
-          labels: this.labels,
-          datasets: this.datasets
+        type: 'line',
+        data: {
+            labels: this.labels,
+            datasets: this.datasets
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          scales: {  
+            yAxes: [
+              {
+                ticks: {
+                  stepSize: 100
+                }
+              }
+            ]
+        }
+        }
+      });
+    },
+    displayRanking: function(){
+      var ctx = document.getElementById('ranking-chart').getContext('2d');
+      var myChart = new Chart(ctx, {
+        type: 'line',
+        data: {
+            labels: this.labels,
+            datasets: this.datasets
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          scales: {  
+            yAxes: [
+              {
+                ticks: {
+                  stepSize: 100
+                }
+              }
+            ]
+        }
+        }
+      });
+    },
+    displayGrouping: function(){
+      var ctx = document.getElementById('grouping-chart').getContext('2d');
+      var myChart = new Chart(ctx, {
+        type: 'line',
+        data: {
+            labels: this.labels,
+            datasets: this.datasets
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          scales: {  
+            yAxes: [
+              {
+                ticks: {
+                  stepSize: 100
+                }
+              }
+            ]
+        }
         }
       });
     }
@@ -50,7 +109,9 @@ var app = new Vue({
     axios.get('https://raw.githubusercontent.com/maunatmt/maunatmt.github.io/main/misc/data.json').then(response =>{
       this.datasets = response.data.trend.datasets;
       this.labels = response.data.trend.labels;
-      this.displayGraph();
+      this.displayTrend();
+      this.displayRanking();
+      this.displayGrouping();
     })
   }
 });

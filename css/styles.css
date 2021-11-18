@@ -90,7 +90,7 @@ figure {
 	background: linear-gradient(-135deg, #11998e, #00F260);
 }
 .purple {
-	background: linear-gradient(-135deg, #8E2DE2, #4A00E0);
+	background: linear-gradient(-135deg, #4A00E0, #8E2DE2);
 }
 .orange {
 	background: linear-gradient(-135deg, #f12711, #f5af19);
@@ -103,6 +103,10 @@ figure {
 }
 .row div {
     flex-basis: 30%;
+}
+.chart-canvas {
+	height: 300px;
+	width: 260px;
 }
 #before-footer {
 	background: mediumturquoise;
