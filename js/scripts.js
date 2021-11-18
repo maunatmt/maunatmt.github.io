@@ -77,12 +77,18 @@ new Vue({
           responsive: true,
           maintainAspectRatio: false,
           scales: {  
-            y: {
+            x: {
               ticks: {
-                stepSize: 10
+                stepSize: 20,
+                callback: function(value, index, values){
+                  return  value +  '%'
+                }
               }
             }
-          }
+          },
+          legend: {
+            display: false
+         }
         }
       });
     },
