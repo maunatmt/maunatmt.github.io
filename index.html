@@ -66,7 +66,7 @@
             <h2>Shortfall</h2>
           </div>
         </figure>
-        <figure id="app1" class="small-panels">
+        <figure id="figures" class="small-panels">
           <div v-for="card in media">
             <div v-if="card.result">
               <div class="small-card red">
@@ -84,12 +84,12 @@
             </div>
           </div>
         </figure>
-        <figure class="row">
+        <figure id="chart" class="row">
           <div class="card">
             <h2 class="green">Social Inflow Trend</h2>
             <div>
-              <div id="trend" style="width:360px">
-                <canvas id="myChart"></canvas>
+              <div class="chart-canvas">
+                <canvas id="trend-chart"></canvas>
               </div>
               <ul>
                 <li>Instagram keeps top share but the number is getting increased.</li>
@@ -98,20 +98,26 @@
             </div>
           </div>
           <div class="card">
-            <h2 class="purple">Trend</h2>
+            <h2 class="purple">Top3 Ranking</h2>
             <div>
+              <div class="chart-canvas">
+                <canvas id="ranking-chart"></canvas>
+              </div>
               <ul>
-                <li>40% of Sunny Street patients are homeless.</li>
-                <li>Majority of the patients are male and are aged between 36 - 55 years old with the yougest being 1 year old.</li>
+                <li>Instagram keeps top share but the number is getting increased.</li>
+                <li>The number of inflow from Youtube is getting increased and it seems to exceed the one of Twitter next month.</li>
               </ul>
             </div>
           </div>
           <div class="card">
             <h2 class="orange">Grouping </h2>
             <div>
+              <div class="chart-canvas">
+                <canvas id="grouping-chart"></canvas>
+              </div>
               <ul>
-                <li>40% of Sunny Street patients are homeless.</li>
-                <li>Majority of the patients are male and are aged between 36 - 55 years old with the yougest being 1 year old.</li>
+                <li>Instagram keeps top share but the number is getting increased.</li>
+                <li>The number of inflow from Youtube is getting increased and it seems to exceed the one of Twitter next month.</li>
               </ul>
             </div>
           </div>

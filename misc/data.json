@@ -18,24 +18,28 @@
 			"label": "Twitter",
 			"data": [190, 220, 160],
 			"borderColor": "rgb(28, 133, 224)",
+			"backgroundColor": "rgba(0, 0, 0, 0)",
 			"lineTension": 0,
 			"fill": false
 		}, {
 			"label": "Facebook",
 			"data": [270, 250, 280],
 			"borderColor": "rgb(46, 63, 121)",
+			"backgroundColor": "rgb(46, 63, 121)",
 			"lineTension": 0,
 			"fill": false
 		}, {
 			"label": "Instagram",
 			"data": [630, 560, 550],
 			"borderColor": "rgb(165, 0, 137)",
+			"backgroundColor": "rgb(165, 0, 137)",
 			"lineTension": 0,
 			"fill": false
 		}, {
 			"label": "Youtube",
 			"data": [70, 90, 140],
 			"borderColor": "rgb(235, 0, 6)",
+			"backgroundColor": "rgb(235, 0, 6)",
 			"lineTension": 0,
 			"fill": false
 		}]
