@@ -107,18 +107,18 @@ new Vue({
           maintainAspectRatio: false,
           scales: {
             x: {
-              scaleLabel: {
+              title: {
                   display: true,
-                  labelString: 'Age',
+                  text: 'Age',
               },
               ticks: {
                   stepSize: 10
               },
             },
             y: {
-              scaleLabel: {
+              title: {
                 display: true,
-                labelString: 'Stay Time',
+                text: 'Stay Time',
               },
               ticks: {
                 stepSize: 10,
