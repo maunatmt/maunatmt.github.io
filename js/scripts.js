@@ -69,8 +69,8 @@ new Vue({
       var myChart = new Chart(ctx, {
         type: 'bar',
         data: {
-            labels: this.labels,
-            datasets: this.datasets
+            labels: this.rankingLabels,
+            datasets: this.rankingDatasets
         },
         options: {
           indexAxis: 'y',
@@ -79,7 +79,7 @@ new Vue({
           scales: {  
             y: {
               ticks: {
-                stepSize: 100
+                stepSize: 10
               }
             }
           }
