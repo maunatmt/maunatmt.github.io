@@ -188,13 +188,13 @@ new Vue({
             y: {
               title: {
                 display: true,
-                text: 'Stay Time',
+                text: 'Purchase Amount',
               },
               beginAtZero: true,
               ticks: {
                 stepSize: 10,
                 callback: function(value, index, values){
-                  return  value +  'min'
+                  return  value +  '€'
                 }
               }
             }
