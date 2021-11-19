@@ -10,7 +10,7 @@
 	"sales": [
 		{ "item": "Net Profit", "number": "3,822€", "result": true, "diff": "+322€" },
 		{ "item": "Sales Amount", "number": "7,590€", "result": true, "diff": "+90€" },
-		{ "item": "Number of Customers", "number": "345", "result": true, "diff": "+45" },
+		{ "item": "# of Customers", "number": "345", "result": true, "diff": "+45" },
 		{ "item": "Customer unit price", "number": "22€", "result": true, "diff": "+2€" },
 		{ "item": "Conversion Rate", "number": "22.5%", "result": false, "diff": "-2.5%" },
 		{ "item": "Customer retention", "number": "18.5%", "result": false, "diff": "-1.5%" }
