@@ -51,30 +51,30 @@
 		"labels": ["Sep,2021", "Oct,2021", "Nov,2021"],
 		"datasets": [{
 			"label": "Amazon",
-			"data": [790, 820, 760],
-			"borderColor": "rgb(28, 133, 224)",
-			"backgroundColor": "rgb(28, 133, 224)",
+			"data": [2090, 1982, 2010],
+			"borderColor": "rgb(237, 124, 9)",
+			"backgroundColor": "rgb(237, 124, 9)",
 			"lineTension": 0,
 			"fill": false
 		}, {
 			"label": "Otto",
-			"data": [870, 850, 880],
-			"borderColor": "rgb(46, 63, 121)",
-			"backgroundColor": "rgb(46, 63, 121)",
+			"data": [1220, 1100, 1105],
+			"borderColor": "rgb(185, 0, 23)",
+			"backgroundColor": "rgb(185, 0, 23)",
 			"lineTension": 0,
 			"fill": false
 		}, {
 			"label": "Zalando",
 			"data": [930, 910, 900],
-			"borderColor": "rgb(165, 0, 137)",
-			"backgroundColor": "rgb(165, 0, 137)",
+			"borderColor": "rgb(235, 78, 10)",
+			"backgroundColor": "rgb(235, 78, 10)",
 			"lineTension": 0,
 			"fill": false
 		}, {
 			"label": "Shop Direct",
-			"data": [670, 690, 740],
-			"borderColor": "rgb(235, 0, 6)",
-			"backgroundColor": "rgb(235, 0, 6)",
+			"data": [670, 710, 790],
+			"borderColor": "rgb(147, 165, 12)",
+			"backgroundColor": "rgb(147, 165, 12)",
 			"lineTension": 0,
 			"fill": false
 		}]
@@ -82,7 +82,7 @@
 	"ranking": {
 		"labels": ["Instagram", "Facebook", "Twitter"],
 		"datasets": [{
-			"label": "Share",
+			"label": "%",
 			"data": [35, 20, 15],
 			"borderColor": "rgb(65, 105, 225)",
 			"backgroundColor": "rgb(65, 105, 225)"
@@ -91,7 +91,7 @@
 	"salesRanking": {
 		"labels": ["Toys", "Watches", "Liquor", "Bags", "Accessories"],
 		"datasets": [{
-			"label": "Share",
+			"label": "%",
 			"data": [32, 22, 14, 8, 4],
 			"borderColor": "rgb(65, 105, 225)",
 			"backgroundColor": "rgb(65, 105, 225)"
@@ -129,12 +129,12 @@
 		],
 		"datasets": [{
 			"label": "Female",
-			"data": [{"x":10,"y":40},{"x":20,"y":35},{"x":30,"y":21},{"x":40,"y":17},{"x":50,"y":23},{"x":60,"y":11}],
+			"data": [{"x":10,"y":11},{"x":20,"y":35},{"x":30,"y":47},{"x":40,"y":32},{"x":50,"y":23},{"x":60,"y":21}],
 			"backgroundColor": "rgba(241, 107, 141, 1)",
 			"borderColor": "rgba(241, 107, 141, 1)"
 		},{
 			"label": "Male",
-			"data": [{"x":10,"y":24},{"x":20,"y":33},{"x":30,"y":27},{"x":40,"y":12},{"x":50,"y":24},{"x":60,"y":21}],
+			"data": [{"x":10,"y":18},{"x":20,"y":25},{"x":30,"y":27},{"x":40,"y":12},{"x":50,"y":24},{"x":60,"y":21}],
 			"backgroundColor": "rgba( 31, 167, 165, 1)",
 			"borderColor": "rgba( 31, 167, 165, 1)"
 		}]
