@@ -60,7 +60,11 @@ new Vue({
           scales: {  
             y: {
               beginAtZero: true,
-              stepSize: 100
+              ticks: {
+                callback: function(value, index, values){
+                  return  value +  '€'
+                }
+              }
             }
           }
         }
@@ -217,8 +221,8 @@ new Vue({
       this.salesRankingDatasets = response.data.salesRanking.datasets;
       this.groupingLabels = response.data.grouping.labels;
       this.groupingDatasets = response.data.grouping.datasets;
-      this.salesGroupingLabels = response.data.grouping.labels;
-      this.salesGroupingDatasets = response.data.grouping.datasets;
+      this.salesGroupingLabels = response.data.salesGrouping.labels;
+      this.salesGroupingDatasets = response.data.salesGrouping.datasets;
       this.displayTrend();
       this.displaySalesTrend();
       this.displayRanking();
