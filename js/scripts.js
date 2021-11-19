@@ -12,8 +12,12 @@ new Vue({
       salesDatasets:[],
       rankingLabels: [],
       rankingDatasets:[],
+      salesRankingLabels: [],
+      salesRankingDatasets:[],
       groupingLabels: [],
       groupingDatasets:[],
+      salesGroupingLabels: [],
+      salesGroupingDatasets:[],
       headers: {
         'Content-Type': 'application/json;charset=UTF-8',
         "Access-Control-Allow-Origin": "*",
@@ -92,6 +96,36 @@ new Vue({
         }
       });
     },
+    displaySalesRanking: function(){
+      var ctx = document.getElementById('sales-ranking-chart').getContext('2d');
+      var myChart = new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: this.salesRankingLabels,
+            datasets: this.salesRankingDatasets
+        },
+        options: {
+          indexAxis: 'y',
+          responsive: true,
+          maintainAspectRatio: false,
+          scales: {  
+            x: {
+              ticks: {
+                stepSize: 20,
+                callback: function(value, index, values){
+                  return  value +  '%'
+                }
+              }
+            }
+          },
+          plugins: {
+            legend : {
+                     display : false
+              }
+          }
+        }
+      });
+    },
     displayGrouping: function(){
       var ctx = document.getElementById('grouping-chart').getContext('2d');
       var myChart = new Chart(ctx, {
@@ -99,6 +133,44 @@ new Vue({
         data: {
             labels: this.groupingLabels,
             datasets: this.groupingDatasets
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          scales: {
+            x: {
+              title: {
+                  display: true,
+                  text: 'Age',
+              },
+              ticks: {
+                  stepSize: 10
+              },
+            },
+            y: {
+              title: {
+                display: true,
+                text: 'Stay Time',
+              },
+              beginAtZero: true,
+              ticks: {
+                stepSize: 10,
+                callback: function(value, index, values){
+                  return  value +  'min'
+                }
+              }
+            }
+          }
+        }
+      });
+    },
+    displaySalesGrouping: function(){
+      var ctx = document.getElementById('sales-grouping-chart').getContext('2d');
+      var myChart = new Chart(ctx, {
+        type: 'scatter',
+        data: {
+            labels: this.salesGroupingLabels,
+            datasets: this.salesGroupingDatasets
         },
         options: {
           responsive: true,
@@ -141,12 +213,18 @@ new Vue({
       this.salesDatasets = response.data.salesTrend.datasets;
       this.rankingLabels = response.data.ranking.labels;
       this.rankingDatasets = response.data.ranking.datasets;
+      this.salesRankingLabels = response.data.salesRanking.labels;
+      this.salesRankingDatasets = response.data.salesRanking.datasets;
       this.groupingLabels = response.data.grouping.labels;
       this.groupingDatasets = response.data.grouping.datasets;
+      this.salesGroupingLabels = response.data.grouping.labels;
+      this.salesGroupingDatasets = response.data.grouping.datasets;
       this.displayTrend();
       this.displaySalesTrend();
       this.displayRanking();
+      this.displaySalesRanking();
       this.displayGrouping();
+      this.displaySalesGrouping();
     })
   }
 });
