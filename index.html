@@ -83,7 +83,7 @@
             </div>
           </div>
         </figure>
-        <figure id="chart" class="row">
+        <figure class="row">
           <div class="card">
             <h2 class="green">Social Followers Trend</h2>
             <div>
@@ -142,8 +142,8 @@
             <h2>Shortfall</h2>
           </div>
         </figure>
-        <figure id="figures" class="small-panels">
-          <div v-for="card in media">
+        <figure id="sales-figures" class="small-panels">
+          <div v-for="card in sales">
             <div v-if="card.result">
               <div class="small-card red">
                 <h2>{{ card.item }}</h2>
@@ -160,12 +160,12 @@
             </div>
           </div>
         </figure>
-        <figure id="chart" class="row">
+        <figure class="row">
           <div class="card">
-            <h2 class="green">Social Followers Trend</h2>
+            <h2 class="green">Sales Trend</h2>
             <div>
               <div class="chart-canvas">
-                <canvas id="trend-chart"></canvas>
+                <canvas id="sales-trend-chart"></canvas>
               </div>
               <ul>
                 <li>Instagram keeps the top share but the number tends to decrease.</li>
