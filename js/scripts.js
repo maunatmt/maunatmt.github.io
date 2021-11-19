@@ -60,7 +60,11 @@ new Vue({
           scales: {  
             y: {
               beginAtZero: true,
-              stepSize: 100
+              ticks: {
+                callback: function(value, index, values){
+                  return  value +  '€'
+                }
+              }
             }
           }
         }
