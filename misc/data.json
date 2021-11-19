@@ -10,9 +10,9 @@
 	"sales": [
 		{ "item": "Net Profit", "number": "3,822€", "result": true, "diff": "+322€" },
 		{ "item": "Sales Amount", "number": "7,590€", "result": true, "diff": "+90€" },
-		{ "item": "Conversion Rate", "number": "22.5%", "result": false, "diff": "-2.5%" },
 		{ "item": "Number of Customers", "number": "345", "result": true, "diff": "+45" },
 		{ "item": "Customer unit price", "number": "22€", "result": true, "diff": "+2€" },
+		{ "item": "Conversion Rate", "number": "22.5%", "result": false, "diff": "-2.5%" },
 		{ "item": "Customer retention", "number": "18.5%", "result": false, "diff": "-1.5%" }
 	],
 	"trend": {
@@ -40,6 +40,38 @@
 			"fill": false
 		}, {
 			"label": "Youtube",
+			"data": [670, 690, 740],
+			"borderColor": "rgb(235, 0, 6)",
+			"backgroundColor": "rgb(235, 0, 6)",
+			"lineTension": 0,
+			"fill": false
+		}]
+	},
+	"salesTrend": {
+		"labels": ["Sep,2021", "Oct,2021", "Nov,2021"],
+		"datasets": [{
+			"label": "Amazon",
+			"data": [790, 820, 760],
+			"borderColor": "rgb(28, 133, 224)",
+			"backgroundColor": "rgb(28, 133, 224)",
+			"lineTension": 0,
+			"fill": false
+		}, {
+			"label": "Otto",
+			"data": [870, 850, 880],
+			"borderColor": "rgb(46, 63, 121)",
+			"backgroundColor": "rgb(46, 63, 121)",
+			"lineTension": 0,
+			"fill": false
+		}, {
+			"label": "Zalando",
+			"data": [930, 910, 900],
+			"borderColor": "rgb(165, 0, 137)",
+			"backgroundColor": "rgb(165, 0, 137)",
+			"lineTension": 0,
+			"fill": false
+		}, {
+			"label": "Shop Direct",
 			"data": [670, 690, 740],
 			"borderColor": "rgb(235, 0, 6)",
 			"backgroundColor": "rgb(235, 0, 6)",
