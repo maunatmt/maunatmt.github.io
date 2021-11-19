@@ -3,13 +3,18 @@ body {
 	margin: 0;
     background-color: rgba(249,249,249,1);
 	overflow-x: hidden;
+	font-family: 'Lato', sans-serif;
 }
 h1 {
 	font-size: 1.5em;
 	margin: 1em 0;
+	color: darkorange;
 }
 figure {
 	margin: 2em auto;
+}
+a#article1, a#article2 {
+    display: block; padding-top: 125px; margin-top: -125px;
 }
 .stop-scroll {
 	overflow: hidden;
@@ -114,8 +119,6 @@ figure {
 #wrap {
     background-color: rgba(249,249,249,1);
 	width: 100%;
-	
-	/* padding-top:4em; */
 }
 .contents {
 	transition: transform .6s cubic-bezier(0.215, 0.61, 0.355, 1);

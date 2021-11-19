@@ -1,11 +1,10 @@
-$("#navTgl").on("click", function(){
-    $("#wrap").toggleClass("stop-scroll").toggleClass('dark-color');
+ $("#navTgl").on("click", function(){
+    $("#wrap").toggleClass('dark-color');
 });
 new Vue({
   el: '#figures',
   data: {
       media: [],
-      trend: {},
       headers: {
         'Content-Type': 'application/json;charset=UTF-8',
         "Access-Control-Allow-Origin": "*",
@@ -19,8 +18,6 @@ new Vue({
           .get('https://raw.githubusercontent.com/maunatmt/maunatmt.github.io/main/misc/data.json', self.headers)
           .then(function(response) {
               self.media = response.data.media;
-              // self.groupingLabels = response.data.grouping.label
-              self.groupingDatasets = response.data.grouping
           })
           .catch(function(error) {
               console.log('Failed to load.', error);

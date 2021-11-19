@@ -7,6 +7,14 @@
 		{ "item": "Youtube Followers", "number": "2,837", "result": true, "diff": "+37" },
 		{ "item": "Twitter Followers", "number": "837", "result": false, "diff": "-13" }
 	],
+	"sales": [
+		{ "item": "Net Profit", "number": "3,822€", "result": true, "diff": "+322€" },
+		{ "item": "Sales Amount", "number": "7,590€", "result": true, "diff": "+90€" },
+		{ "item": "Conversion Rate", "number": "22.5%", "result": false, "diff": "-2.5%" },
+		{ "item": "Number of Customers", "number": "345", "result": true, "diff": "+45" },
+		{ "item": "Customer unit price", "number": "22€", "result": true, "diff": "+2€" },
+		{ "item": "Customer retention", "number": "18.5%", "result": false, "diff": "-1.5%" }
+	],
 	"trend": {
 		"labels": ["Sep,2021", "Oct,2021", "Nov,2021"],
 		"datasets": [{
@@ -44,8 +52,8 @@
 		"datasets": [{
 			"label": "Share",
 			"data": [35, 20, 15],
-			"borderColor": "rgb(46, 63, 121)",
-			"backgroundColor": "rgb(46, 63, 121)"
+			"borderColor": "rgb(65, 105, 225)",
+			"backgroundColor": "rgb(65, 105, 225)"
 		}]
 	},
 	"grouping": {
