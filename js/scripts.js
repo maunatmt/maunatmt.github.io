@@ -1,6 +1,32 @@
 //  $("#navTgl").on("click", function(){
 //     $("#wrap").toggleClass('dark-color');
 // });
+$(document).ready(function(){
+  if(80 < $(this).scrollTop()) {
+    $('header').addClass('change-color');
+    $('header nav li a').addClass('scroll');
+} else {
+    $('header').removeClass('change-color');
+    $('header nav li a').removeClass('scroll');
+}
+});
+$(document).on('scroll', function(){
+  if(80 < $(this).scrollTop()) {
+      $('header').addClass('change-color');
+      $('header nav li a').addClass('scroll');
+  } else {
+      $('header').removeClass('change-color');
+      $('header nav li a').removeClass('scroll');
+  }
+});
+$(document).ready(function(){
+  $("#company-logo").mouseover(function(){
+    $(".fa-cube").addClass("logo-animation-hover");
+  });
+  $("#company-logo").mouseout(function(){
+    $(".fa-cube").removeClass("logo-animation-hover");
+  });
+});
 new Vue({
   el: '#wrap',
   data: {
@@ -232,121 +258,3 @@ new Vue({
     })
   }
 });
-// new Vue({
-//   el: '#chart',
-//   data: {
-//     labels: [],
-//     datasets:[],
-//     rankingLabels: [],
-//     rankingDatasets:[],
-//     groupingLabels: [],
-//     groupingDatasets:[],
-//     headers: {
-//       'Content-Type': 'application/json;charset=UTF-8',
-//       "Access-Control-Allow-Origin": "*",
-//     }
-//   },
-//   methods:{
-//     displayTrend: function(){
-//       var ctx = document.getElementById('trend-chart').getContext('2d');
-//       var myChart = new Chart(ctx, {
-//         type: 'line',
-//         data: {
-//             labels: this.labels,
-//             datasets: this.datasets
-//         },
-//         options: {
-//           responsive: true,
-//           maintainAspectRatio: false,
-//           scales: {  
-//             y: {
-//                   beginAtZero: true,
-//                   stepSize: 100
-//               }
-//           }
-//         }
-//       });
-//     },
-//     displayRanking: function(){
-//       var ctx = document.getElementById('ranking-chart').getContext('2d');
-//       var myChart = new Chart(ctx, {
-//         type: 'bar',
-//         data: {
-//             labels: this.rankingLabels,
-//             datasets: this.rankingDatasets
-//         },
-//         options: {
-//           indexAxis: 'y',
-//           responsive: true,
-//           maintainAspectRatio: false,
-//           scales: {  
-//             x: {
-//               ticks: {
-//                 stepSize: 20,
-//                 callback: function(value, index, values){
-//                   return  value +  '%'
-//                 }
-//               }
-//             }
-//           },
-//           plugins: {
-//             legend : {
-//                      display : false
-//               }
-//           }
-//         }
-//       });
-//     },
-//     displayGrouping: function(){
-//       var ctx = document.getElementById('grouping-chart').getContext('2d');
-//       var myChart = new Chart(ctx, {
-//         type: 'scatter',
-//         data: {
-//             labels: this.groupingLabels,
-//             datasets: this.groupingDatasets
-//         },
-//         options: {
-//           responsive: true,
-//           maintainAspectRatio: false,
-//           scales: {
-//             x: {
-//               title: {
-//                   display: true,
-//                   text: 'Age',
-//               },
-//               ticks: {
-//                   stepSize: 10
-//               },
-//             },
-//             y: {
-//               title: {
-//                 display: true,
-//                 text: 'Stay Time',
-//               },
-//               beginAtZero: true,
-//               ticks: {
-//                 stepSize: 10,
-//                 callback: function(value, index, values){
-//                   return  value +  'min'
-//                 }
-//               }
-//             }
-//           }
-//         }
-//       });
-//     }
-//   },
-//   mounted: function(){
-//     axios.get('https://raw.githubusercontent.com/maunatmt/maunatmt.github.io/main/misc/data.json', self.headers).then(response =>{
-//       this.datasets = response.data.trend.datasets;
-//       this.labels = response.data.trend.labels;
-//       this.rankingLabels = response.data.ranking.labels;
-//       this.rankingDatasets = response.data.ranking.datasets;
-//       this.groupingLabels = response.data.grouping.labels;
-//       this.groupingDatasets = response.data.grouping.datasets;
-//       this.displayTrend();
-//       this.displayRanking();
-//       this.displayGrouping();
-//     })
-//   }
-// });
