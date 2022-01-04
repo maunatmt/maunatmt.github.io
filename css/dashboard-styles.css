@@ -383,6 +383,7 @@ header nav {
 	max-width: 647px;
 	margin-left: auto;
     height: 100%;
+	color: inherit;
 }
 header nav ul {
 	display: flex;
@@ -393,21 +394,20 @@ header nav ul {
 	font-size: .8em;
 	text-align: center;
 	white-space: nowrap;
+	color: inherit;
 }
 header nav li {
 	display: flex;
 	flex-basis: 25%;
+	color: inherit;
 }
-/* header nav li:not(:first-child) {
-	border-left: 1px solid rgba(0,0,0,.1);
-} */
 header nav li a {
 	flex-grow: 1;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	padding: 1em;
-	color: white;
+	color: inherit;
 	text-decoration: inherit;
 	transition: background .3s;
 	position: relative;
@@ -425,10 +425,12 @@ header nav li a::after {
 	transform-origin: left top;
 	transition: transform .3s;
 }
+header nav li a.scroll::after {
+	background: #1E90FF;
+}
 header nav li a:hover::after {
 	transform: scale(1, 1);
 }
-
 header nav {
 	overflow: hidden;
 	transition: height .6s cubic-bezier(0.215, 0.61, 0.355, 1), opacity .6s;
