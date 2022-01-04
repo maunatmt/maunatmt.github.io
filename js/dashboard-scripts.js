@@ -1,6 +1,3 @@
-//  $("#navTgl").on("click", function(){
-//     $("#wrap").toggleClass('dark-color');
-// });
 $(document).ready(function(){
   if(80 < $(this).scrollTop()) {
     $('header').addClass('change-color');

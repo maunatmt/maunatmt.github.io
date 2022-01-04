@@ -167,10 +167,10 @@ h1 a {
 figure {
 	margin: 2em auto;
 }
-a#article1, a#article2 {
+a#article01, a#article02, a#article03, a#article04 {
     display: block; 
-	padding-top: 65px; 
-	margin-top: -65px;
+	padding-top: 85px; 
+	margin-top: -85px;
 }
 .svg {
 	filter: drop-shadow(1.95px 1.95px 2.6px rgba(0, 0, 0, 0.45));
@@ -623,7 +623,6 @@ article {
 }
 section {
 	text-align: center;
-
 }
 
 /* :::::: nav :::::: */
