@@ -13,6 +13,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@1,600&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./css/common.css">
 <link rel="stylesheet" href="./css/dashboard-styles.css">
 <script
   src="https://code.jquery.com/jquery-3.6.0.min.js"
@@ -29,28 +30,27 @@
 <label for="navTgl" class="open"><span></span></label>
 <label for="navTgl" class="close"></label>
 <nav class="menu">
-	<h2 class="logo">Dashboard</h2>
+	<h2 class="logo">KPI Dashboard</h2>
 	<ul>
-    <li><a href="#article1">Media KPIs</a></li>
-    <li><a href="#article2">e-Commerse KPIs</a></li>
+    <li><a href="#media">Media KPIs</a></li>
+    <li><a href="#commerce">e-Commerse KPIs</a></li>
     <li><a href="./" target="_blank" rel="noopener noreferrer">Company&nbsp;<i class="fas fa-external-link-alt"></i></a></li>
   </ul>
 </nav>
 <div id="wrap">
-  <div class="contents">
     <header>
       <a id="company-logo" href="./"><i class="fas fa-cube logo-animation"></i><span class="logo">KPI Dashboard</span></a>
       <nav>
         <ul>
-          <li><a href="#article01">Media KPIs</a></li>
-          <li><a href="#article02">e-Commerse KPIs</a></li>
+          <li><a href="#media">Media KPIs</a></li>
+          <li><a href="#commerce">e-Commerse KPIs</a></li>
           <li><a href="./" target="_blank" rel="noopener noreferrer">Company&nbsp;<i class="fas fa-external-link-alt"></i></a></li>
-  </ul>
+        </ul>
       </nav>
     </header>
-    <article>
+    <article id="media">
       <section>
-        <h1><a id="article01" />Media KPIs - 30 days</h1>
+        <h1>Media KPIs - 30 days</h1>
         <ul style="color:gray">
           <li>The media team's goal is to raise awareness among our clients.</li>
           <li>It is important to get as many customers as possible to approach our media sites.</li>
@@ -122,9 +122,9 @@
         </figure>
       </section>
     </article>
-    <article>
-      <section >
-        <h1><a id="article02" />e-Commerce KPIs - 30 days</h1>
+    <article id="commerce">
+      <section>
+        <h1>e-Commerce KPIs - 30 days</h1>
         <ul style="color:gray">
           <li>The e-Commerce team's goal is to increase the net profit of electronic commerce.</li>
           <li>Therefore, we need to raise the sales amount and reduce running costs.</li>
@@ -197,10 +197,10 @@
       </section>
     </article>
     <footer>
-      <p class="copyright"><small>© iST.inc</small></p>
+      <p class="copyright">KPI Dashboard</p>
     </footer>
-  </div>
 </div>
 <script src="./js/dashboard-scripts.js"></script>
+<script src="./js/common.js"></script>
 </body>
 </html>
