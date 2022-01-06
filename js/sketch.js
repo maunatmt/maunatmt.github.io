@@ -9,7 +9,8 @@ function setup() {
   let canvas = createCanvas(windowWidth, h);
   rectMode(CENTER);
   canvas.parent('canvas');
-  stroke(30, 144, 255, 18);
+  // stroke(30, 144, 255, 18);
+  stroke(255, 255, 255, 28);
   noFill();
   t = 0;
   step = 0;
