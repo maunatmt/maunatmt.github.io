@@ -71,6 +71,7 @@ section div p {
 	height: auto;
   	width: 100%;
 	border-radius: 5px;
+	cursor: default;
 }
 .slick-slide:not(.slick-center) {
 	filter: brightness(0.3);
@@ -89,18 +90,32 @@ section div p {
 	background-color: rgba(245,245,245, 1);
 	padding-bottom: 20px;
 }
-.slick-arrow{
+.slick-arrow {
 	position: absolute;
 	top: 50%;
-	margin-top: -16px;
+	margin-top: -25px;
+	width:50px;
+	height:50px;
+	border-radius: 50%;
 	z-index:1;
 	color: white;
+	border: white 2px solid;
+	opacity: 0.6;
+	cursor: pointer;
+}
+.slick-arrow:hover {
+	opacity: 1;
+}
+.slick-arrow::before {
+	position: relative;
+	top: 50%;
+	left: 18px;
 }
 .prev-arrow {
-	left: 15px;
+	left: 25px;
 }
 .next-arrow {
-	right: 15px;
+	right: 25px;
 }
 
 /******** Service Section ********/
