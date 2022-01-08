@@ -3,8 +3,12 @@
 body {
 	margin: 0;
 	background-color: #1E90FF;
-	overflow-x: hidden;
+	/* overflow-x: hidden; */
 	font-family: 'Lato', sans-serif;
+}
+#wrap {
+    background-color: rgba(249,249,249,1);
+	width: 100%;
 }
 a {
 	text-decoration: none;
@@ -30,10 +34,7 @@ h1 {
 	font-size: 1.5em;
 	text-align: center;
 }
-#wrap {
-    background-color: rgba(249,249,249,1);
-	width: 100%;
-}
+
 button, input, select, textarea {
 	font-family: 'Lato', sans-serif;
 }

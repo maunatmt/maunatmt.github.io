@@ -109,7 +109,7 @@ section div p {
 .slick-arrow::before {
 	position: relative;
 	top: 50%;
-	left: 18px;
+	left: 15px;
 }
 .prev-arrow {
 	left: 25px;
@@ -337,7 +337,7 @@ section div p {
 }
 .form {
 	margin: 30px auto;
-	padding: 20px;
+	padding-top: 20px;
 	width: 100%;
 	max-width: 720px;
 	box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
@@ -360,7 +360,8 @@ section div p {
 .form-item-input {
 	border: 1px solid #ddd;
 	border-radius: 6px;
-	margin-left: 40px;
+	margin-left: auto;
+	margin-right: auto;
 	padding-left: 1em;
 	padding-right: 1em;
 	height: 48px;
@@ -372,7 +373,8 @@ section div p {
 .form-item-textarea {
 	border: 1px solid #ddd;
 	border-radius: 6px;
-	margin-left: 40px;
+	margin-left: auto;
+	margin-right: auto;
 	padding-top: 15px;
 	padding-left: 1em;
 	padding-right: 1em;
@@ -429,22 +431,19 @@ section div p {
 		font-size: 18px;
 	}
 	.form-item {
-		padding-left: 14px;
-		padding-right: 14px;
-		padding-top: 16px;
-		padding-bottom: 16px;
-		flex-wrap: wrap;
+		margin-left: auto;
+		margin-right: auto;
+		width: 80%;
 	}
 	.form-item-input {
-		margin-left: 0;
 		margin-top: 18px;
 		height: 40px;
 		flex: inherit;
 		font-size: 15px;
+		width: 100%;
 	}
 	.form-item-textarea {
 	  margin-top: 18px;
-	  margin-left: 0;
 	  height: 200px;
 	  flex: inherit;
 	  font-size: 15px;
