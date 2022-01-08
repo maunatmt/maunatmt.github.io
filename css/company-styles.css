@@ -344,24 +344,10 @@ section div p {
 	background: linear-gradient(-135deg, rgba(54,97,253,0.6), rgba(54,97,253,0.6));
 	background-color:rgba(0,0,0,0.6);
 }
-.form-item {
-	padding-top: 12px;
-	padding-bottom: 12px;
-	width: 100%;
-	align-items: center;
-}
-.form-item-label {
-	width: 100%;
-	max-width: 248px;
-	letter-spacing: 0.05em;
-	font-weight: bold;
-	font-size: 18px;
-}
 .form-item-input {
 	border: 1px solid #ddd;
 	border-radius: 6px;
-	margin-left: auto;
-	margin-right: auto;
+	margin: 12px auto;
 	padding-left: 1em;
 	padding-right: 1em;
 	height: 48px;
@@ -369,12 +355,14 @@ section div p {
 	max-width: 410px;
 	background: #eaedf2;
 	font-size: 18px;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
 }
 .form-item-textarea {
 	border: 1px solid #ddd;
 	border-radius: 6px;
-	margin-left: auto;
-	margin-right: auto;
+	margin: 12px auto;
 	padding-top: 15px;
 	padding-left: 1em;
 	padding-right: 1em;
@@ -384,6 +372,9 @@ section div p {
 	max-width: 410px;
 	background: #eaedf2;
 	font-size: 18px;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
 }
 .form-btn {
 	border-radius: 15px;
@@ -430,22 +421,10 @@ section div p {
 		line-height: 70px;
 		font-size: 18px;
 	}
-	.form-item {
-		margin-left: auto;
-		margin-right: auto;
-		width: 80%;
-	}
 	.form-item-input {
-		margin-top: 18px;
-		height: 40px;
-		flex: inherit;
-		font-size: 15px;
-		width: 100%;
+		width: 90%;
 	}
 	.form-item-textarea {
-	  margin-top: 18px;
-	  height: 200px;
-	  flex: inherit;
-	  font-size: 15px;
+		width: 90%;
 	}
 }

@@ -2,7 +2,8 @@
 /******** General ********/
 body {
 	margin: 0;
-	background-color: #1E90FF;
+	/* background-color: #1E90FF; */
+	background-color: rgba(249,249,249,1);
 	/* overflow-x: hidden; */
 	font-family: 'Lato', sans-serif;
 }
