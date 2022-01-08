@@ -3,6 +3,7 @@ h1 {
 	font-size: 1.5em;
 	color: darkorange;
 	text-align: left;
+	padding-left: 12px;
 }
 figure {
 	margin: 2em auto;
@@ -45,15 +46,15 @@ figure {
 .card div ul li {
 	padding-right: 10px;
 }
-.small-panels {
+.panels {
     display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
 	width: 100%;
 	text-align: center;
-	margin: 10px;
+	margin: 10px auto;
 }
-.small-panels div {
+.panels div {
     flex-basis: 30%;
 	margin: 5px;
 }
@@ -91,7 +92,6 @@ figure {
 .orange {
 	background: linear-gradient(-135deg, #f12711, #f5af19);
 }
-
 .row {
     display: flex;
 	flex-wrap: wrap;

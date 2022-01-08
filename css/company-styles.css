@@ -112,10 +112,10 @@ section div p {
 	left: 15px;
 }
 .prev-arrow {
-	left: 25px;
+	left: 20px;
 }
 .next-arrow {
-	right: 25px;
+	right: 20px;
 }
 
 /******** Service Section ********/
@@ -322,14 +322,10 @@ section div p {
 .hidden_box input#label1 {
     display: none;
 }
-
-/*中身を非表示にしておく*/
 .hidden_box .form {
     display: none;
     transition: 0.8s;
 }
-
-/*クリックで中身表示*/
 .hidden_box input:checked ~ .form {
     height: auto;
 	display: block;
@@ -399,6 +395,18 @@ section div p {
 	}
 }
 @media screen and (max-width: 480px) {
+	.top-message {
+		font-size:24px;
+	}
+	.top-message p {
+		font-size: 12px;
+	}
+	.prev-arrow {
+		left: 10px;
+	}
+	.next-arrow {
+		right: 10px;
+	}
 	.row div {
 		flex-basis: 100%;
 	}
