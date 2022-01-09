@@ -56,25 +56,25 @@
           <li>It is important to get as many customers as possible to approach our media sites.</li>
           <li>Let's take actions for improving our products based on values of KPIs for this month.</li>
         </ul>
-        <figure class="panels">
-          <div class="small-card red">
+        <figure class="number-item-group">
+          <div class="number-card red">
             <h2>Achieved</h2>
           </div>
-          <div class="small-card blue">
+          <div class="number-card blue">
             <h2>Shortfall</h2>
           </div>
         </figure>
-        <figure id="figures" class="panels">
+        <figure id="figures" class="number-item-group">
           <template v-for="card in media">
             <template v-if="card.result">
-              <div class="small-card red">
+              <div class="number-card red">
                 <h2>{{ card.item }}</h2>
                 <p>{{ card.number }}</p>
                 <span>{{ card.diff }}</span>
               </div>
             </template>
             <template v-else>
-              <div class="small-card blue">
+              <div class="number-card blue">
                 <h2>{{ card.item }}</h2>
                 <p>{{ card.number }}</p>
                 <span>{{ card.diff }}</span>
@@ -82,7 +82,7 @@
             </template>
           </template>
         </figure>
-        <figure class="row">
+        <figure class="chart-item-group">
           <div class="card">
             <h2 class="green">Social Followers Trend</h2>
             <div>
@@ -130,25 +130,25 @@
           <li>Therefore, we need to raise the sales amount and reduce running costs.</li>
           <li>Let's take actions for increasing our net profit based on values of KPIs for this month.</li>
         </ul>
-        <figure class="panels">
-          <div class="small-card red">
+        <figure class="number-item-group">
+          <div class="number-card red">
             <h2>Achieved</h2>
           </div>
-          <div class="small-card blue">
+          <div class="number-card blue">
             <h2>Shortfall</h2>
           </div>
         </figure>
-        <figure id="sales-figures" class="panels">
+        <figure id="sales-figures" class="number-item-group">
           <template v-for="card in sales">
             <template v-if="card.result">
-              <div class="small-card red">
+              <div class="number-card red">
                 <h2>{{ card.item }}</h2>
                 <p>{{ card.number }}</p>
                 <span>{{ card.diff }}</span>
               </div>
             </template>
             <template v-else>
-              <div class="small-card blue">
+              <div class="number-card blue">
                 <h2>{{ card.item }}</h2>
                 <p>{{ card.number }}</p>
                 <span>{{ card.diff }}</span>
@@ -156,7 +156,7 @@
             </template>
           </template>
         </figure>
-        <figure class="row">
+        <figure class="chart-item-group">
           <div class="card">
             <h2 class="green">Sales Site Trend</h2>
             <div>
