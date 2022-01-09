@@ -5,9 +5,6 @@ h1 {
 	text-align: left;
 	padding-left: 12px;
 }
-/* figure {
-	margin: 2em auto;
-} */
 #media {
 	margin-top: 48px;
 }
@@ -18,6 +15,7 @@ h1 {
 .svg {
 	filter: drop-shadow(1.95px 1.95px 2.6px rgba(0, 0, 0, 0.45));
 }
+
 /******** Chart number-container ********/
 .chart-item-group {
     display: flex;
@@ -29,11 +27,40 @@ h1 {
 .chart-item-group div {
     flex-basis: 30%;
 }
+.chart-card {
+	box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+	border-radius: 5px;
+	margin: 10px;
+	display: inline-block;
+	background: linear-gradient(-135deg, #FFFFFF, #FFFFFF);
+	width: 100%;
+}
+.chart-card h2 {
+	margin: 0;
+	padding: 10px;
+	box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+	border-radius: 5px 5px 0 0;
+	text-align: center;
+	color:white;
+}
+.chart-card div {
+	padding: 5px;
+}
+.chart-card div p {
+	text-align: center;
+}
+.chart-card div ul {
+	padding-left: 30px;
+}
+.chart-card div ul li {
+	padding-right: 10px;
+}
 
 .chart-container {
 	height: 250px;
 	width: 90%;
 }
+
 .number-item-group {
     display: flex;
 	flex-wrap: wrap;
@@ -46,35 +73,6 @@ h1 {
     flex-basis: 30%;
 	margin: 5px;
 }
-.card {
-	box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
-	border-radius: 5px;
-	margin: 10px;
-	display: inline-block;
-	background: linear-gradient(-135deg, #FFFFFF, #FFFFFF);
-	width: 100%;
-}
-.card h2 {
-	margin: 0;
-	padding: 10px;
-	box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
-	border-radius: 5px 5px 0 0;
-	text-align: center;
-	color:white;
-}
-.card div {
-	padding: 5px;
-}
-.card div p {
-	text-align: center;
-}
-.card div ul {
-	padding-left: 30px;
-}
-.card div ul li {
-	padding-right: 10px;
-}
-
 .number-card {
 	box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
 	border-radius: 5px;
@@ -109,6 +107,7 @@ h1 {
 .orange {
 	background: linear-gradient(-135deg, #f12711, #f5af19);
 }
+
 @media screen and (max-width: 760px) {
 	.number-card h2 {
 		font-size: 1em;
