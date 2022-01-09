@@ -5,9 +5,9 @@ h1 {
 	text-align: left;
 	padding-left: 12px;
 }
-figure {
+/* figure {
 	margin: 2em auto;
-}
+} */
 #media {
 	margin-top: 48px;
 }
@@ -18,13 +18,24 @@ figure {
 .svg {
 	filter: drop-shadow(1.95px 1.95px 2.6px rgba(0, 0, 0, 0.45));
 }
+/******** Chart Panels ********/
+.row {
+    display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	width: 100%;
+	margin: 0;
+}
+.row div {
+    flex-basis: 30%;
+}
 .card {
 	box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
 	border-radius: 5px;
 	margin: 10px;
-	padding: 0px;
 	display: inline-block;
 	background: linear-gradient(-135deg, #FFFFFF, #FFFFFF);
+	width: 100%;
 }
 .card h2 {
 	margin: 0;
@@ -45,6 +56,10 @@ figure {
 }
 .card div ul li {
 	padding-right: 10px;
+}
+.chart-container canvas {
+	height: 250px;
+	width: 90%;
 }
 .panels {
     display: flex;
@@ -92,16 +107,21 @@ figure {
 .orange {
 	background: linear-gradient(-135deg, #f12711, #f5af19);
 }
-.row {
-    display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
-	width: 100%;
-}
-.row div {
-    flex-basis: 30%;
-}
-.chart-canvas {
-	height: 300px;
-	width: 260px;
+@media screen and (max-width: 479px) {
+	.small-card h2 {
+		font-size: 1em;
+	}
+	.small-card p {
+		font-size: 1.5em;
+	}
+	.small-card span {
+		font-size: 1em;
+	}
+	.row {
+		width: 90%;
+		margin: 0 auto;
+	}
+	.row div {
+		flex-basis: 90%;
+	}
 }
