@@ -18,16 +18,33 @@ h1 {
 .svg {
 	filter: drop-shadow(1.95px 1.95px 2.6px rgba(0, 0, 0, 0.45));
 }
-/******** Chart Panels ********/
-.row {
+/******** Chart number-container ********/
+.chart-item-group {
     display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
 	width: 100%;
 	margin: 0;
 }
-.row div {
+.chart-item-group div {
     flex-basis: 30%;
+}
+
+.chart-container {
+	height: 250px;
+	width: 90%;
+}
+.number-item-group {
+    display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	width: 100%;
+	text-align: center;
+	margin: 10px auto;
+}
+.number-item-group div {
+    flex-basis: 30%;
+	margin: 5px;
 }
 .card {
 	box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
@@ -57,23 +74,8 @@ h1 {
 .card div ul li {
 	padding-right: 10px;
 }
-.chart-container canvas {
-	height: 250px;
-	width: 90%;
-}
-.panels {
-    display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
-	width: 100%;
-	text-align: center;
-	margin: 10px auto;
-}
-.panels div {
-    flex-basis: 30%;
-	margin: 5px;
-}
-.small-card {
+
+.number-card {
 	box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
 	border-radius: 5px;
 	padding: 0px 0px 10px 0px;
@@ -81,14 +83,14 @@ h1 {
 	color:white;
 	width: 100%;
 }
-.small-card h2 {
+.number-card h2 {
 	margin: 0.5em 0.5em 0em 0.5em;
 }
-.small-card p {
+.number-card p {
 	font-size: 3em;
 	margin: 0px;
 }
-.small-card span {
+.number-card span {
 	font-size: 1.5em;
 }
 
@@ -107,21 +109,21 @@ h1 {
 .orange {
 	background: linear-gradient(-135deg, #f12711, #f5af19);
 }
-@media screen and (max-width: 479px) {
-	.small-card h2 {
+@media screen and (max-width: 760px) {
+	.number-card h2 {
 		font-size: 1em;
 	}
-	.small-card p {
+	.number-card p {
 		font-size: 1.5em;
 	}
-	.small-card span {
+	.number-card span {
 		font-size: 1em;
 	}
-	.row {
+	.chart-item-group {
 		width: 90%;
 		margin: 0 auto;
 	}
-	.row div {
+	.chart-item-group div {
 		flex-basis: 90%;
 	}
 }
