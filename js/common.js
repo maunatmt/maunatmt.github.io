@@ -11,9 +11,11 @@ $(function() {
 $(document).on('scroll', function(){
   if(80 < $(this).scrollTop()) {
       $('header').addClass('change-color');
+      $('.open').addClass('change-color');
       $('header nav li a').addClass('scroll');
   } else {
       $('header').removeClass('change-color');
+      $('.open').removeClass('change-color');
       $('header nav li a').removeClass('scroll');
   }
 });

@@ -109,7 +109,7 @@ section div p {
 .slick-arrow::before {
 	position: relative;
 	top: 50%;
-	left: 15px;
+	left: 17px;
 }
 .prev-arrow {
 	left: 20px;
@@ -179,6 +179,7 @@ section div p {
 	justify-content: left;
 	align-items: center;
 	width: 100%;
+	margin: 0 auto;
 }
 .item-row div {
 	flex-basis: 100%;
@@ -397,9 +398,18 @@ section div p {
 @media screen and (max-width: 480px) {
 	.top-message {
 		font-size:24px;
+		top: 90px;
 	}
 	.top-message p {
-		font-size: 12px;
+		font-size: 14px;
+	}
+	.slick-arrow {
+		margin-top: -15px;
+		width:30px;
+		height:30px;
+	}
+	.slick-arrow::before {
+		left: 10px;
 	}
 	.prev-arrow {
 		left: 10px;
@@ -415,6 +425,10 @@ section div p {
 	}
 	.layer-row div .fas {
 		font-size: 50px;
+	}
+	.item-row {
+		justify-content: center;
+		margin: 0 auto;
 	}
 	.item-row div {
 		flex-basis: 25%;
