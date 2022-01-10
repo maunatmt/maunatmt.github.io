@@ -31,8 +31,10 @@ section ul li {
 	
 }
 h1 {
-	font-size: 1.5em;
 	text-align: center;
+}
+h2 {
+	font-size: 1.2em;
 }
 
 button, input, select, textarea {
@@ -47,7 +49,7 @@ label {
 	left: 0;
 }
 .open {
-	background-color: #1E90FF;
+	background-color: none;
 	z-index: 20;
 	width: 48px;
 	height: 48px;
@@ -210,9 +212,9 @@ footer {
   margin-left: 0.5em;
   font-size:2em;
   line-height: 48px;
-  animation: anim-scale 1.5s ease-out;
+  animation: anim-scale 1.2s ease-out;
   transform-origin: center;
-  animation-delay: .3s;
+  animation-delay: .2s;
 }
 .logo-animation:hover {
 	animation: anim-scale 1.5s infinite;
@@ -326,7 +328,12 @@ header nav {
 	}
 	header .logo-animation {
 		padding-left: 42px;
-		transition-duration: .5s;
+		transition-duration: .3s;
+	}
+	.open.change-color span,
+	.open.change-color::before,
+	.open.change-color::after {
+		border-bottom: 2px solid #1E90FF;
 	}
 }
 @media screen and (max-width: 480px) {
