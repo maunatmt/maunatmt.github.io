@@ -341,19 +341,4 @@ header nav {
 		display: block;
 		width: 100%;
 	}
-	.row div {
-		flex-basis: 100%;
-	}
-	.step-row div {
-		flex-basis: 100%;
-	}
-	.item-row div {
-		flex-basis: 25%;
-	}
-	.step-row div .fas {
-		font-size: 50px;
-	}
-	.item-row div p {
-		font-size: 15px;
-	}
 }
