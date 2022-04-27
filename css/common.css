@@ -188,6 +188,9 @@ header.scrolled {
 	letter-spacing: .1em;
     padding-left: 10px;
 }
+header.scrolled .logo {
+	color: #1E90FF;
+}
 footer {
 	box-sizing: border-box;
 	text-align: center;
