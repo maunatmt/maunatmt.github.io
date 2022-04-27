@@ -1,10 +1,10 @@
 $(function() {
-  var headerHeight = 48;//固定ヘッダーの高さを入れる
+  var headerHeight = 48;    // 固定ヘッダーの高さ
   $('[href^="#"]').click(function(){
     var href= $(this).attr("href");
     var target = $(href == "#" || href == "" ? 'html' : href);
     var position = target.offset().top-headerHeight; 
-    $("html, body").animate({scrollTop:position}, 200, "swing");//200はスクロールの移動スピードです
+    $("html, body").animate({scrollTop:position}, 200, "swing");
     return false;
   });
 });
