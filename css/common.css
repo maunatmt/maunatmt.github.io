@@ -176,10 +176,19 @@ header.change-color {
 	color: #1E90FF;
 	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, .1);
 }
-header span {
+.logo {
+	margin: 0;
+	padding: 0;
+	vertical-align: top;
+	font-size: 1.5em;
 	color: white;
+	font-family: 'Nunito', sans-serif;
+	height: 48px;
+	font-weight: 400;
+	letter-spacing: .1em;
+    padding-left: 10px;
 }
-header.change-color span {
+header.change-color .logo {
 	color: #1E90FF;
 }
 footer {
@@ -191,18 +200,7 @@ footer {
 	line-height: 100px;
 	filter: drop-shadow(1.95px 1.95px 5.6px rgba(0, 0, 0, 0.45));
 }
-.logo {
-	margin: 0;
-	padding: 0;
-	vertical-align: top;
-	font-size: 1.5em;
-	color: inherit;
-	font-family: 'Nunito', sans-serif;
-	height: 48px;
-	font-weight: 400;
-	letter-spacing: .1em;
-    padding-left: 10px;
-}
+
 #company-logo {
 	display: block; 
 	color: inherit;
