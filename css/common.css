@@ -171,6 +171,11 @@ header {
     z-index: 10;
     transition : all 0.5s;
 }
+header.change-color {
+	background-color: white;
+	color: #1E90FF;
+	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, .1);
+}
 .logo {
 	margin: 0;
 	padding: 0;
@@ -183,12 +188,7 @@ header {
 	letter-spacing: .1em;
     padding-left: 10px;
 }
-header.change-color {
-	background-color: white;
-	color: #1E90FF;
-	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, .1);
-}
-.change-color .logo{
+header.change-color .logo {
 	color: #1E90FF;
 }
 footer {
