@@ -10,12 +10,12 @@ $(function() {
 });
 $(document).on('scroll', function(){
   if(80 < $(this).scrollTop()) {
-      $('header').addClass('change-color');
-      $('.open').addClass('change-color');
+      $('header').addClass('scrolled');
+      $('.open').addClass('scrolled');
       $('header nav li a').addClass('scroll');
   } else {
-      $('header').removeClass('change-color');
-      $('.open').removeClass('change-color');
+      $('header').removeClass('scrolled');
+      $('.open').removeClass('scrolled');
       $('header nav li a').removeClass('scroll');
   }
 });

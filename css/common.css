@@ -171,7 +171,7 @@ header {
     z-index: 10;
     transition : all 0.5s;
 }
-header.change-color {
+header.scrolled {
 	background-color: white;
 	color: #1E90FF;
 	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, .1);
@@ -187,9 +187,6 @@ header.change-color {
 	font-weight: 400;
 	letter-spacing: .1em;
     padding-left: 10px;
-}
-header.change-color .logo {
-	color: #1E90FF;
 }
 footer {
 	box-sizing: border-box;
@@ -334,9 +331,9 @@ header nav {
 		padding-left: 42px;
 		transition-duration: .3s;
 	}
-	.open.change-color span,
-	.open.change-color::before,
-	.open.change-color::after {
+	.open.scrolled span,
+	.open.scrolled::before,
+	.open.scrolled::after {
 		border-bottom: 2px solid #1E90FF;
 	}
 }
