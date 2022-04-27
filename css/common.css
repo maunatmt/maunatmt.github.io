@@ -177,7 +177,10 @@ header.change-color {
 	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, .1);
 }
 header span {
-	color: inherit;
+	color: white;
+}
+header.change-color span {
+	color: #1E90FF;
 }
 footer {
 	box-sizing: border-box;
