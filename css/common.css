@@ -177,9 +177,7 @@ header.change-color {
 	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, .1);
 }
 header.change-color span {
-	background-color: white;
-	color: yellow;
-	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, .1);
+	color: #1E90FF;
 }
 footer {
 	box-sizing: border-box;
